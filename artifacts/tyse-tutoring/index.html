@@ -1052,6 +1052,92 @@
     }
 
     /* ============================================================
+       SOCIAL PROOF BAR
+    ============================================================ */
+    .social-proof {
+      background-color: var(--white);
+      padding: 2rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .social-proof__stat {
+      text-align: center;
+      font-size: 1rem;
+      color: var(--gray);
+      line-height: var(--leading-relaxed);
+      margin-bottom: 1.25rem;
+    }
+
+    .social-proof__stat strong {
+      font-size: 1.05rem;
+      font-weight: var(--weight-bold);
+      color: var(--terracotta);
+    }
+
+    .social-proof__label {
+      text-align: center;
+      font-size: 0.8rem;
+      font-style: italic;
+      color: var(--gray);
+      margin-bottom: 0.75rem;
+    }
+
+    /* Marquee outer wrapper */
+    .marquee-outer {
+      width: 100%;
+      overflow: hidden;
+      -webkit-mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        black 8%,
+        black 92%,
+        transparent 100%
+      );
+      mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        black 8%,
+        black 92%,
+        transparent 100%
+      );
+    }
+
+    /* Scrolling track */
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      gap: 2.5rem;
+      align-items: center;
+      animation: marquee-scroll 28s linear infinite;
+      will-change: transform;
+    }
+
+    .marquee-outer:hover .marquee-track {
+      animation-play-state: paused;
+    }
+
+    @keyframes marquee-scroll {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+
+    .marquee-item {
+      font-size: 0.9rem;
+      font-weight: var(--weight-medium);
+      color: var(--dark);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .marquee-dot {
+      color: var(--border);
+      margin: 0 0;
+      flex-shrink: 0;
+      font-size: 1rem;
+      line-height: 1;
+    }
+
+    /* ============================================================
        BREAKPOINTS — 768px (tablet)
     ============================================================ */
     @media (min-width: 768px) {
@@ -1316,6 +1402,67 @@
       </div>
     </section>
     <!-- ==================== / HERO ==================== -->
+
+    <!-- ==================== SOCIAL PROOF BAR ==================== -->
+    <section class="social-proof" id="social-proof" aria-label="Student placement highlights">
+
+      <!-- Headline stat -->
+      <p class="social-proof__stat">
+        Our students have been placed at <strong>30+ of the Top 50 Universities</strong> in the United States.
+      </p>
+
+      <!-- "Including:" label -->
+      <p class="social-proof__label">Including:</p>
+
+      <!-- CSS-only infinite scrolling marquee -->
+      <div class="marquee-outer" aria-hidden="true">
+        <div class="marquee-track">
+
+          <!-- Copy 1 of school list -->
+          <span class="marquee-item">Princeton</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">MIT</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">Harvard</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">Stanford</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">Yale</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">Duke</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">Penn</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">Northwestern</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">Cornell</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">Brown</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">Vanderbilt</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">UC Berkeley</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">Georgetown</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">UCLA</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">University of Michigan</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">Notre Dame</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">Dartmouth</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">Columbia</span><span class="marquee-dot">&middot;</span>
+
+          <!-- Copy 2 — exact duplicate for seamless infinite loop -->
+          <span class="marquee-item">Princeton</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">MIT</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">Harvard</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">Stanford</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">Yale</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">Duke</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">Penn</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">Northwestern</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">Cornell</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">Brown</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">Vanderbilt</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">UC Berkeley</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">Georgetown</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">UCLA</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">University of Michigan</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">Notre Dame</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">Dartmouth</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">Columbia</span><span class="marquee-dot">&middot;</span>
+
+        </div>
+      </div>
+
+    </section>
+    <!-- ==================== / SOCIAL PROOF BAR ==================== -->
 
   </main>
 
