@@ -17,34 +17,16 @@
     ============================================================ */
     :root {
       /* --- Color Palette --- */
-      --color-primary:         #1B4F72;   /* deep navy blue */
-      --color-primary-light:   #2E86C1;   /* medium blue */
-      --color-primary-dark:    #0F2D40;   /* darkest navy */
-
-      --color-secondary:       #D4AC0D;   /* warm gold */
-      --color-secondary-light: #F4D03F;   /* light gold */
-      --color-secondary-dark:  #9A7D0A;   /* dark gold */
-
-      --color-accent:          #1ABC9C;   /* teal/mint */
-      --color-accent-light:    #A9DFBF;   /* pale mint */
-
-      --color-neutral-50:      #F9FAFB;
-      --color-neutral-100:     #F3F4F6;
-      --color-neutral-200:     #E5E7EB;
-      --color-neutral-300:     #D1D5DB;
-      --color-neutral-400:     #9CA3AF;
-      --color-neutral-500:     #6B7280;
-      --color-neutral-600:     #4B5563;
-      --color-neutral-700:     #374151;
-      --color-neutral-800:     #1F2937;
-      --color-neutral-900:     #111827;
-
-      --color-white:           #FFFFFF;
-      --color-black:           #000000;
-
-      --color-success:         #10B981;
-      --color-warning:         #F59E0B;
-      --color-error:           #EF4444;
+      --forest:           #264025;
+      --terracotta:       #AD6B4B;
+      --terracotta-light: #DDCBB7;
+      --sage:             #82896E;
+      --sage-light:       #F5EDD7;
+      --dark:             #000000;
+      --gray:             #BA986D;
+      --cream:            #F5EDD7;
+      --white:            #FFFFFF;
+      --border:           #DDCBB7;
 
       /* --- Typography --- */
       --font-heading:          'Playfair Display', Georgia, serif;
@@ -95,6 +77,8 @@
       --space-20:  5rem;      /* 80px */
       --space-24:  6rem;      /* 96px */
       --space-32:  8rem;      /* 128px */
+      --space-xl:  5rem;      /* 80px  — alias */
+      --space-2xl: 7rem;      /* 112px — alias */
 
       /* --- Border Radius --- */
       --radius-none: 0;
@@ -121,7 +105,7 @@
       --container-xl:   1200px;
       --container-2xl:  1400px;
 
-      --nav-height:     72px;
+      --nav-height:        72px;
       --nav-height-mobile: 64px;
 
       /* --- Transitions --- */
@@ -159,8 +143,8 @@
       font-size: var(--text-base);
       font-weight: var(--weight-regular);
       line-height: var(--leading-normal);
-      color: var(--color-neutral-800);
-      background-color: var(--color-white);
+      color: var(--dark);
+      background-color: var(--white);
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       overflow-x: hidden;
@@ -239,7 +223,7 @@
       font-weight: var(--weight-bold);
       line-height: var(--leading-tight);
       letter-spacing: var(--tracking-tight);
-      color: var(--color-primary-dark);
+      color: var(--forest);
     }
 
     .heading-h1 {
@@ -248,7 +232,7 @@
       font-weight: var(--weight-bold);
       line-height: var(--leading-tight);
       letter-spacing: var(--tracking-tight);
-      color: var(--color-primary-dark);
+      color: var(--forest);
     }
 
     .heading-h2 {
@@ -256,7 +240,7 @@
       font-size: var(--text-4xl);
       font-weight: var(--weight-semibold);
       line-height: var(--leading-snug);
-      color: var(--color-primary-dark);
+      color: var(--forest);
     }
 
     .heading-h3 {
@@ -264,7 +248,7 @@
       font-size: var(--text-3xl);
       font-weight: var(--weight-semibold);
       line-height: var(--leading-snug);
-      color: var(--color-primary);
+      color: var(--terracotta);
     }
 
     .heading-h4 {
@@ -272,25 +256,25 @@
       font-size: var(--text-xl);
       font-weight: var(--weight-semibold);
       line-height: var(--leading-snug);
-      color: var(--color-neutral-800);
+      color: var(--dark);
     }
 
     .body-lg {
       font-size: var(--text-lg);
       line-height: var(--leading-relaxed);
-      color: var(--color-neutral-600);
+      color: var(--gray);
     }
 
     .body-base {
       font-size: var(--text-base);
       line-height: var(--leading-normal);
-      color: var(--color-neutral-600);
+      color: var(--gray);
     }
 
     .body-sm {
       font-size: var(--text-sm);
       line-height: var(--leading-normal);
-      color: var(--color-neutral-500);
+      color: var(--sage);
     }
 
     .label-sm {
@@ -299,7 +283,7 @@
       font-weight: var(--weight-semibold);
       letter-spacing: var(--tracking-widest);
       text-transform: uppercase;
-      color: var(--color-secondary);
+      color: var(--terracotta);
     }
 
     /* ============================================================
@@ -331,7 +315,7 @@
     }
 
     .btn:focus-visible {
-      outline: 3px solid var(--color-primary-light);
+      outline: 3px solid var(--sage);
       outline-offset: 2px;
     }
 
@@ -339,67 +323,66 @@
       transform: translateY(1px);
     }
 
-    /* Primary */
+    /* Primary — terracotta */
     .btn-primary {
-      background-color: var(--color-primary);
-      color: var(--color-white);
-      border-color: var(--color-primary);
+      background-color: var(--terracotta);
+      color: var(--white);
+      border-color: var(--terracotta);
     }
 
     .btn-primary:hover {
-      background-color: var(--color-primary-dark);
-      border-color: var(--color-primary-dark);
+      background-color: #8f5038;
+      border-color: #8f5038;
       box-shadow: var(--shadow-md);
     }
 
-    /* Secondary */
+    /* Secondary — forest */
     .btn-secondary {
-      background-color: var(--color-secondary);
-      color: var(--color-primary-dark);
-      border-color: var(--color-secondary);
+      background-color: var(--forest);
+      color: var(--white);
+      border-color: var(--forest);
     }
 
     .btn-secondary:hover {
-      background-color: var(--color-secondary-dark);
-      border-color: var(--color-secondary-dark);
-      color: var(--color-white);
+      background-color: #1a2e19;
+      border-color: #1a2e19;
       box-shadow: var(--shadow-md);
     }
 
-    /* Outline */
+    /* Outline — forest border */
     .btn-outline {
       background-color: transparent;
-      color: var(--color-primary);
-      border-color: var(--color-primary);
+      color: var(--forest);
+      border-color: var(--forest);
     }
 
     .btn-outline:hover {
-      background-color: var(--color-primary);
-      color: var(--color-white);
+      background-color: var(--forest);
+      color: var(--white);
       box-shadow: var(--shadow-md);
     }
 
-    /* Outline White (for dark backgrounds) */
+    /* Outline White — for dark backgrounds */
     .btn-outline-white {
       background-color: transparent;
-      color: var(--color-white);
-      border-color: var(--color-white);
+      color: var(--white);
+      border-color: var(--white);
     }
 
     .btn-outline-white:hover {
-      background-color: var(--color-white);
-      color: var(--color-primary-dark);
+      background-color: var(--white);
+      color: var(--forest);
     }
 
     /* Ghost */
     .btn-ghost {
       background-color: transparent;
-      color: var(--color-primary);
+      color: var(--forest);
       border-color: transparent;
     }
 
     .btn-ghost:hover {
-      background-color: var(--color-neutral-100);
+      background-color: var(--cream);
     }
 
     /* Size variants */
@@ -506,8 +489,8 @@
       left: 0;
       right: 0;
       height: var(--nav-height-mobile);
-      background-color: var(--color-white);
-      border-bottom: 1px solid var(--color-neutral-200);
+      background-color: var(--white);
+      border-bottom: 1px solid var(--border);
       box-shadow: var(--shadow-sm);
       z-index: var(--z-sticky);
       transition: box-shadow var(--transition-base),
@@ -538,18 +521,18 @@
       font-family: var(--font-heading);
       font-size: var(--text-xl);
       font-weight: var(--weight-bold);
-      color: var(--color-primary-dark);
+      color: var(--forest);
       letter-spacing: var(--tracking-tight);
       line-height: 1;
     }
 
     .nav__logo-text span {
-      color: var(--color-secondary);
+      color: var(--terracotta);
     }
 
     .nav__tagline {
       font-size: var(--text-xs);
-      color: var(--color-neutral-500);
+      color: var(--sage);
       letter-spacing: var(--tracking-wider);
       text-transform: uppercase;
       display: none;
@@ -565,7 +548,7 @@
     .nav__link {
       font-size: var(--text-sm);
       font-weight: var(--weight-medium);
-      color: var(--color-neutral-700);
+      color: var(--dark);
       padding: var(--space-2) var(--space-3);
       border-radius: var(--radius-md);
       transition: color var(--transition-fast),
@@ -575,12 +558,12 @@
     }
 
     .nav__link:hover {
-      color: var(--color-primary);
-      background-color: var(--color-neutral-100);
+      color: var(--forest);
+      background-color: var(--cream);
     }
 
     .nav__link.active {
-      color: var(--color-primary);
+      color: var(--forest);
       font-weight: var(--weight-semibold);
     }
 
@@ -607,14 +590,14 @@
     }
 
     .nav__hamburger:hover {
-      background-color: var(--color-neutral-100);
+      background-color: var(--cream);
     }
 
     .nav__hamburger-line {
       display: block;
       width: 22px;
       height: 2px;
-      background-color: var(--color-neutral-700);
+      background-color: var(--dark);
       border-radius: var(--radius-full);
       transform-origin: center;
       transition: transform var(--transition-base),
@@ -642,8 +625,8 @@
       top: var(--nav-height-mobile);
       left: 0;
       right: 0;
-      background-color: var(--color-white);
-      border-bottom: 1px solid var(--color-neutral-200);
+      background-color: var(--white);
+      border-bottom: 1px solid var(--border);
       box-shadow: var(--shadow-lg);
       z-index: calc(var(--z-sticky) - 1);
       overflow: hidden;
@@ -670,7 +653,7 @@
     .nav__mobile-link {
       font-size: var(--text-base);
       font-weight: var(--weight-medium);
-      color: var(--color-neutral-700);
+      color: var(--dark);
       padding: var(--space-3) var(--space-4);
       border-radius: var(--radius-md);
       transition: color var(--transition-fast),
@@ -680,19 +663,19 @@
     }
 
     .nav__mobile-link:hover {
-      color: var(--color-primary);
-      background-color: var(--color-neutral-100);
+      color: var(--forest);
+      background-color: var(--cream);
     }
 
     .nav__mobile-link.active {
-      color: var(--color-primary);
+      color: var(--forest);
       font-weight: var(--weight-semibold);
     }
 
     .nav__mobile-cta {
       margin-top: var(--space-4);
       padding-top: var(--space-4);
-      border-top: 1px solid var(--color-neutral-200);
+      border-top: 1px solid var(--border);
     }
 
     /* ============================================================
@@ -703,11 +686,229 @@
     }
 
     /* ============================================================
+       HERO SECTION
+    ============================================================ */
+    .hero {
+      position: relative;
+      background-color: var(--forest);
+      min-height: 90vh;
+      padding: var(--space-2xl) 0 var(--space-xl);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    /* Subtle diagonal texture overlay */
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: repeating-linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0.03) 0px,
+        rgba(255, 255, 255, 0.03) 1px,
+        transparent 1px,
+        transparent 24px
+      );
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .hero__inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Two-column layout */
+    .hero__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-12);
+      align-items: center;
+    }
+
+    /* ---- Left column ---- */
+    .hero__left {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-6);
+    }
+
+    .hero__eyebrow {
+      font-family: var(--font-body);
+      font-size: var(--text-sm);
+      font-weight: var(--weight-semibold);
+      letter-spacing: var(--tracking-wider);
+      text-transform: uppercase;
+      color: #C49070;
+      line-height: var(--leading-normal);
+    }
+
+    .hero__headline {
+      font-family: var(--font-heading);
+      font-size: var(--text-4xl);
+      font-weight: var(--weight-bold);
+      line-height: var(--leading-tight);
+      letter-spacing: var(--tracking-tight);
+      color: var(--white);
+    }
+
+    .hero__subheadline {
+      font-size: var(--text-base);
+      line-height: var(--leading-relaxed);
+      color: var(--terracotta-light);
+      max-width: 560px;
+    }
+
+    .hero__proof {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+      font-size: var(--text-sm);
+      font-weight: var(--weight-medium);
+      color: var(--white);
+    }
+
+    .hero__proof-stars {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      color: var(--sage);
+      flex-shrink: 0;
+    }
+
+    .hero__proof-stars svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .hero__ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-4);
+      align-items: center;
+    }
+
+    /* ---- Right column ---- */
+    .hero__right {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero__video-card {
+      width: 100%;
+      max-width: 480px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      min-height: 320px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-5);
+      text-align: center;
+    }
+
+    .hero__play-btn {
+      width: 72px;
+      height: 72px;
+      border-radius: var(--radius-full);
+      background-color: var(--terracotta);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background-color var(--transition-base),
+                  transform var(--transition-fast),
+                  box-shadow var(--transition-base);
+      flex-shrink: 0;
+      border: none;
+    }
+
+    .hero__play-btn:hover {
+      background-color: #8f5038;
+      transform: scale(1.06);
+      box-shadow: 0 0 0 8px rgba(173, 107, 75, 0.2);
+    }
+
+    .hero__play-btn svg {
+      margin-left: 4px;
+    }
+
+    .hero__card-title {
+      font-family: var(--font-heading);
+      font-size: var(--text-xl);
+      font-weight: var(--weight-semibold);
+      color: var(--white);
+      line-height: var(--leading-snug);
+    }
+
+    .hero__card-desc {
+      font-size: var(--text-sm);
+      color: var(--terracotta-light);
+      line-height: var(--leading-relaxed);
+    }
+
+    .hero__card-note {
+      font-size: var(--text-xs);
+      color: var(--sage);
+      font-style: italic;
+    }
+
+    /* ---- Stats bar ---- */
+    .hero__stats {
+      margin-top: var(--space-12);
+      padding-top: var(--space-8);
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .hero__stats-row {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-8);
+    }
+
+    .hero__stat {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-1);
+    }
+
+    .hero__stat-number {
+      font-family: var(--font-heading);
+      font-size: var(--text-4xl);
+      font-weight: var(--weight-bold);
+      color: var(--white);
+      line-height: 1;
+    }
+
+    .hero__stat-caption {
+      font-size: var(--text-sm);
+      color: var(--terracotta-light);
+      line-height: var(--leading-normal);
+    }
+
+    .hero__stat-divider {
+      display: none;
+      width: 1px;
+      height: 48px;
+      background: rgba(255, 255, 255, 0.15);
+      flex-shrink: 0;
+    }
+
+    /* ============================================================
        FOOTER
     ============================================================ */
     .footer {
-      background-color: var(--color-primary-dark);
-      color: var(--color-neutral-300);
+      background-color: var(--forest);
+      color: var(--terracotta-light);
     }
 
     .footer__main {
@@ -725,18 +926,18 @@
       font-family: var(--font-heading);
       font-size: var(--text-2xl);
       font-weight: var(--weight-bold);
-      color: var(--color-white);
+      color: var(--white);
       margin-bottom: var(--space-3);
     }
 
     .footer__brand-logo span {
-      color: var(--color-secondary);
+      color: var(--terracotta);
     }
 
     .footer__brand-desc {
       font-size: var(--text-sm);
       line-height: var(--leading-relaxed);
-      color: var(--color-neutral-400);
+      color: var(--terracotta-light);
       max-width: 280px;
     }
 
@@ -746,12 +947,12 @@
       gap: var(--space-2);
       margin-top: var(--space-4);
       font-size: var(--text-sm);
-      color: var(--color-neutral-400);
+      color: var(--terracotta-light);
     }
 
     .footer__brand-location svg {
       flex-shrink: 0;
-      color: var(--color-secondary);
+      color: var(--terracotta);
     }
 
     /* Footer column headings */
@@ -761,7 +962,7 @@
       font-weight: var(--weight-semibold);
       letter-spacing: var(--tracking-widest);
       text-transform: uppercase;
-      color: var(--color-neutral-200);
+      color: var(--white);
       margin-bottom: var(--space-4);
     }
 
@@ -773,14 +974,14 @@
 
     .footer__link {
       font-size: var(--text-sm);
-      color: var(--color-neutral-400);
+      color: var(--terracotta-light);
       text-decoration: none;
       transition: color var(--transition-fast);
       line-height: var(--leading-normal);
     }
 
     .footer__link:hover {
-      color: var(--color-secondary-light);
+      color: var(--white);
     }
 
     /* Footer contact column */
@@ -795,23 +996,23 @@
       align-items: flex-start;
       gap: var(--space-3);
       font-size: var(--text-sm);
-      color: var(--color-neutral-400);
+      color: var(--terracotta-light);
     }
 
     .footer__contact-item svg {
       flex-shrink: 0;
       margin-top: 2px;
-      color: var(--color-secondary);
+      color: var(--terracotta);
     }
 
     .footer__contact-link {
-      color: var(--color-neutral-400);
+      color: var(--terracotta-light);
       text-decoration: none;
       transition: color var(--transition-fast);
     }
 
     .footer__contact-link:hover {
-      color: var(--color-secondary-light);
+      color: var(--white);
     }
 
     /* Footer bottom bar */
@@ -830,7 +1031,7 @@
 
     .footer__copyright {
       font-size: var(--text-xs);
-      color: var(--color-neutral-500);
+      color: var(--sage);
     }
 
     .footer__legal-links {
@@ -841,13 +1042,13 @@
 
     .footer__legal-link {
       font-size: var(--text-xs);
-      color: var(--color-neutral-500);
+      color: var(--sage);
       text-decoration: none;
       transition: color var(--transition-fast);
     }
 
     .footer__legal-link:hover {
-      color: var(--color-neutral-300);
+      color: var(--terracotta-light);
     }
 
     /* ============================================================
@@ -872,6 +1073,20 @@
       }
 
       .nav__tagline {
+        display: block;
+      }
+
+      .hero__headline {
+        font-size: var(--text-5xl);
+      }
+
+      .hero__stats-row {
+        flex-direction: row;
+        justify-content: center;
+        gap: var(--space-12);
+      }
+
+      .hero__stat-divider {
         display: block;
       }
 
@@ -918,6 +1133,15 @@
         display: none !important;
       }
 
+      .hero__grid {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-16);
+      }
+
+      .hero__headline {
+        font-size: var(--text-6xl);
+      }
+
       .footer__grid {
         grid-template-columns: 1.5fr 1fr 1fr;
         gap: var(--space-12);
@@ -944,10 +1168,10 @@
 
         <!-- Desktop Links -->
         <ul class="nav__links" role="list">
-          <li><a href="#about"    class="nav__link" data-nav-link>About</a></li>
-          <li><a href="#subjects" class="nav__link" data-nav-link>Subjects</a></li>
-          <li><a href="#process"  class="nav__link" data-nav-link>How It Works</a></li>
-          <li><a href="#pricing"  class="nav__link" data-nav-link>Pricing</a></li>
+          <li><a href="#about"        class="nav__link" data-nav-link>About</a></li>
+          <li><a href="#subjects"     class="nav__link" data-nav-link>Subjects</a></li>
+          <li><a href="#process"      class="nav__link" data-nav-link>How It Works</a></li>
+          <li><a href="#pricing"      class="nav__link" data-nav-link>Pricing</a></li>
           <li><a href="#testimonials" class="nav__link" data-nav-link>Reviews</a></li>
           <li>
             <a href="#contact" class="btn btn-primary btn-sm nav__cta" data-nav-link>
@@ -990,11 +1214,109 @@
   </div>
 
   <!-- ============================================================
-       MAIN CONTENT AREA
-       (blank — future sections will be inserted here)
+       MAIN CONTENT
   ============================================================ -->
   <main class="page-body" id="main-content">
-    <!-- Sections will be added here -->
+
+    <!-- ==================== HERO ==================== -->
+    <section class="hero" id="hero">
+      <div class="container hero__inner">
+
+        <!-- Two-column grid -->
+        <div class="hero__grid">
+
+          <!-- Left: Copy -->
+          <div class="hero__left">
+
+            <p class="hero__eyebrow">
+              Expert Tutoring for Every Kind of Learner &mdash; Boulder, CO
+            </p>
+
+            <h1 class="hero__headline">
+              Finally &mdash; A Tutor Who Gets How Your Student Actually Thinks
+            </h1>
+
+            <p class="hero__subheadline">
+              Tyse Tutoring in Boulder, CO specializes in 1-on-1 sessions for middle school, high school, and college students &mdash; with proven results across dyslexia, dyscalculia, SAT/ACT prep, and math and science. Our students have been placed at 30+ of the top 50 universities in the US.
+            </p>
+
+            <!-- Social proof -->
+            <div class="hero__proof">
+              <div class="hero__proof-stars" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              </div>
+              <span>Students placed at 30+ of the top 50 US universities</span>
+            </div>
+
+            <!-- CTAs -->
+            <div class="hero__ctas">
+              <a href="#contact" class="btn btn-primary btn-lg">
+                Book Your Session
+              </a>
+              <a href="#pricing" class="btn btn-outline-white btn-lg">
+                See Our Packages
+              </a>
+            </div>
+
+          </div>
+
+          <!-- Right: Video placeholder card -->
+          <div class="hero__right">
+            <div class="hero__video-card">
+
+              <button class="hero__play-btn" aria-label="Play tutor introduction video">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="white" aria-hidden="true">
+                  <polygon points="5 3 19 12 5 21 5 3"/>
+                </svg>
+              </button>
+
+              <p class="hero__card-title">Meet Your Tutor</p>
+
+              <p class="hero__card-desc">
+                Watch how Tyse Tutoring approaches learning differences and test prep
+              </p>
+
+              <p class="hero__card-note">[Replace with embedded video]</p>
+
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Stats bar -->
+        <div class="hero__stats">
+          <div class="hero__stats-row">
+
+            <div class="hero__stat">
+              <span class="hero__stat-number">30+</span>
+              <span class="hero__stat-caption">of Top 50 US Universities</span>
+            </div>
+
+            <div class="hero__stat-divider" aria-hidden="true"></div>
+
+            <div class="hero__stat">
+              <span class="hero__stat-number">1-on-1</span>
+              <span class="hero__stat-caption">Personalized Sessions Only</span>
+            </div>
+
+            <div class="hero__stat-divider" aria-hidden="true"></div>
+
+            <div class="hero__stat">
+              <span class="hero__stat-number">3 Levels</span>
+              <span class="hero__stat-caption">Middle &middot; High School &middot; College</span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- ==================== / HERO ==================== -->
+
   </main>
 
   <!-- ============================================================
