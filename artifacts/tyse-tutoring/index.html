@@ -1252,6 +1252,214 @@
     }
 
     /* ============================================================
+       SERVICES SECTION
+    ============================================================ */
+    .services {
+      background-color: var(--white);
+      padding: var(--space-16) 0;
+    }
+
+    .services__header {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto var(--space-12);
+    }
+
+    .services__eyebrow {
+      font-family: var(--font-body);
+      font-size: var(--text-xs);
+      font-weight: var(--weight-semibold);
+      letter-spacing: var(--tracking-widest);
+      text-transform: uppercase;
+      color: var(--terracotta);
+      margin-bottom: var(--space-3);
+    }
+
+    .services__headline {
+      font-family: var(--font-heading);
+      font-size: var(--text-4xl);
+      font-weight: var(--weight-bold);
+      line-height: var(--leading-tight);
+      letter-spacing: var(--tracking-tight);
+      color: var(--forest);
+      margin-bottom: var(--space-4);
+    }
+
+    .services__sub {
+      font-size: var(--text-lg);
+      line-height: var(--leading-relaxed);
+      color: var(--gray);
+    }
+
+    /* ---- Featured card ---- */
+    .services__featured {
+      background-color: var(--forest);
+      border-radius: var(--radius-xl);
+      padding: var(--space-10);
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-8);
+      margin-bottom: 1.5rem;
+      box-shadow: var(--shadow-xl);
+    }
+
+    .featured__badge {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      background-color: var(--terracotta);
+      color: var(--white);
+      font-size: var(--text-xs);
+      font-weight: var(--weight-bold);
+      letter-spacing: var(--tracking-widest);
+      text-transform: uppercase;
+      padding: var(--space-1) var(--space-3);
+      border-radius: var(--radius-full);
+      margin-bottom: var(--space-4);
+    }
+
+    .featured__title {
+      font-family: var(--font-heading);
+      font-size: var(--text-4xl);
+      font-weight: var(--weight-bold);
+      color: var(--white);
+      line-height: var(--leading-tight);
+      letter-spacing: var(--tracking-tight);
+      margin-bottom: var(--space-2);
+    }
+
+    .featured__subtitle {
+      font-style: italic;
+      font-size: var(--text-base);
+      color: var(--terracotta-light);
+      margin-bottom: var(--space-5);
+    }
+
+    .featured__body {
+      font-size: var(--text-base);
+      line-height: var(--leading-relaxed);
+      color: var(--terracotta-light);
+      margin-bottom: var(--space-5);
+    }
+
+    .featured__list {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-2);
+      margin-bottom: var(--space-8);
+    }
+
+    .featured__list-item {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-3);
+      font-size: var(--text-sm);
+      color: var(--terracotta-light);
+      line-height: var(--leading-relaxed);
+    }
+
+    .featured__list-item::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: var(--radius-full);
+      background-color: var(--terracotta);
+      flex-shrink: 0;
+      margin-top: 0.45em;
+    }
+
+    /* Stats box on the right */
+    .featured__stats-box {
+      background-color: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.13);
+      border-radius: var(--radius-lg);
+      padding: var(--space-8);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: var(--space-4);
+    }
+
+    .featured__stat-number {
+      font-family: var(--font-heading);
+      font-size: var(--text-6xl);
+      font-weight: var(--weight-bold);
+      color: var(--white);
+      line-height: 1;
+    }
+
+    .featured__stat-label {
+      font-size: var(--text-base);
+      color: var(--terracotta-light);
+      line-height: var(--leading-relaxed);
+      max-width: 220px;
+    }
+
+    .featured__stat-divider {
+      width: 40px;
+      height: 1px;
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .featured__stat-note {
+      font-size: var(--text-sm);
+      color: var(--sage);
+      line-height: var(--leading-relaxed);
+      max-width: 200px;
+    }
+
+    /* ---- Standard two-card row ---- */
+    .services__cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-6);
+    }
+
+    .svc-card {
+      background-color: var(--white);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--sage);
+      border-radius: var(--radius-lg);
+      padding: var(--space-8);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-4);
+      transition: transform var(--transition-base),
+                  box-shadow var(--transition-base);
+    }
+
+    .svc-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .svc-card__eyebrow {
+      font-size: var(--text-xs);
+      font-weight: var(--weight-semibold);
+      letter-spacing: var(--tracking-widest);
+      text-transform: uppercase;
+      color: var(--sage);
+    }
+
+    .svc-card__title {
+      font-family: var(--font-heading);
+      font-size: var(--text-2xl);
+      font-weight: var(--weight-bold);
+      color: var(--forest);
+      line-height: var(--leading-snug);
+    }
+
+    .svc-card__body {
+      font-size: var(--text-sm);
+      line-height: var(--leading-relaxed);
+      color: var(--gray);
+      flex: 1;
+    }
+
+    /* ============================================================
        BREAKPOINTS — 768px (tablet)
     ============================================================ */
     @media (min-width: 768px) {
@@ -1281,6 +1489,10 @@
       }
 
       .why-tyse__grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .services__cards {
         grid-template-columns: 1fr 1fr;
       }
 
@@ -1348,6 +1560,11 @@
 
       .why-tyse__grid {
         grid-template-columns: repeat(4, 1fr);
+      }
+
+      .services__featured {
+        grid-template-columns: 1fr 0.55fr;
+        align-items: start;
       }
 
       .footer__grid {
@@ -1636,6 +1853,74 @@
       </div>
     </section>
     <!-- ==================== / WHY TYSE TUTORING ==================== -->
+
+    <!-- ==================== SERVICES ==================== -->
+    <section class="services" id="subjects">
+      <div class="container">
+
+        <!-- Section header -->
+        <div class="services__header">
+          <p class="services__eyebrow">What We Offer</p>
+          <h2 class="services__headline">Specialized Support, Built for Real Students</h2>
+          <p class="services__sub">Whether your student needs test prep, structured literacy help, or a stronger foundation in math and science — there&rsquo;s a path here for them.</p>
+        </div>
+
+        <!-- Featured card: Test Prep -->
+        <div class="services__featured">
+
+          <!-- Left: text content -->
+          <div class="featured__left">
+            <div>
+              <span class="featured__badge">&#9733; Most Popular</span>
+            </div>
+            <h3 class="featured__title">SAT, ACT &amp; Test Prep</h3>
+            <p class="featured__subtitle">The most competitive college admissions cycle in a generation — we&rsquo;ll get your student ready for it.</p>
+            <p class="featured__body">Tyse builds fully customized prep plans around each student&rsquo;s current scores, target schools, and available timeline. For students with dyslexia or processing differences, strategies are adapted so the test format stops being an obstacle and starts being manageable.</p>
+            <ul class="featured__list" role="list">
+              <li class="featured__list-item">Diagnostic assessment to identify exact score gaps</li>
+              <li class="featured__list-item">Section-by-section strategy for Reading, Writing, and Math</li>
+              <li class="featured__list-item">Adapted approaches for students with dyslexia or processing differences</li>
+              <li class="featured__list-item">Full-length timed practice tests with detailed review</li>
+            </ul>
+            <a href="#packages" class="btn btn-primary">Book a Test Prep Session</a>
+          </div>
+
+          <!-- Right: stats box -->
+          <div class="featured__stats-box">
+            <p class="featured__stat-number">30+</p>
+            <p class="featured__stat-label">of the Top 50 US Universities</p>
+            <div class="featured__stat-divider"></div>
+            <p class="featured__stat-note">Our students have been admitted to schools across the country, including many of the most selective programs.</p>
+          </div>
+
+        </div>
+        <!-- / Featured card -->
+
+        <!-- Standard two-card row -->
+        <div class="services__cards">
+
+          <!-- Card: Learning Differences -->
+          <article class="svc-card">
+            <p class="svc-card__eyebrow">Dyslexia &middot; Dyscalculia &middot; Structured Literacy</p>
+            <h3 class="svc-card__title">Learning Differences Support</h3>
+            <p class="svc-card__body">Students with dyslexia, dyscalculia, or other learning differences don&rsquo;t need harder work — they need a fundamentally different approach. Tyse is trained in the Barton Reading and Spelling System and works from a structured literacy framework, adjusting pacing, presentation, and technique so that material actually builds and sticks rather than gets re-covered without result.</p>
+            <a href="#packages" class="btn btn-secondary">Book a Session</a>
+          </article>
+
+          <!-- Card: Math & Science -->
+          <article class="svc-card">
+            <p class="svc-card__eyebrow">Middle School &middot; High School &middot; College</p>
+            <h3 class="svc-card__title">Math &amp; Science Tutoring</h3>
+            <p class="svc-card__body">From pre-algebra to college-level calculus, statistics, physics, and chemistry — Tyse focuses on real conceptual understanding rather than formula memorization. Students learn to see the reasoning behind the math, which means they can handle problems they&rsquo;ve never seen before rather than freezing when a question looks slightly different from practice.</p>
+            <a href="#packages" class="btn btn-secondary">Book a Session</a>
+          </article>
+
+        </div>
+        <!-- / Standard two-card row -->
+
+      </div>
+    </section>
+    <!-- ==================== / SERVICES ==================== -->
 
   </main>
 
