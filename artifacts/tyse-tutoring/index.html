@@ -1138,6 +1138,120 @@
     }
 
     /* ============================================================
+       WHY TYSE TUTORING SECTION
+    ============================================================ */
+    .why-tyse {
+      background-color: var(--cream);
+      padding: var(--space-16) 0;
+    }
+
+    /* Section header */
+    .why-tyse__header {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto var(--space-12);
+    }
+
+    .why-tyse__eyebrow {
+      font-family: var(--font-body);
+      font-size: var(--text-xs);
+      font-weight: var(--weight-semibold);
+      letter-spacing: var(--tracking-widest);
+      text-transform: uppercase;
+      color: var(--terracotta);
+      margin-bottom: var(--space-3);
+    }
+
+    .why-tyse__headline {
+      font-family: var(--font-heading);
+      font-size: var(--text-4xl);
+      font-weight: var(--weight-bold);
+      line-height: var(--leading-tight);
+      letter-spacing: var(--tracking-tight);
+      color: var(--forest);
+      margin-bottom: var(--space-4);
+    }
+
+    .why-tyse__sub {
+      font-size: var(--text-lg);
+      line-height: var(--leading-relaxed);
+      color: var(--gray);
+    }
+
+    /* Four-card grid: 1 col → 2 col at 768px → 4 col at 1200px */
+    .why-tyse__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-6);
+    }
+
+    /* Card */
+    .why-card {
+      background-color: var(--white);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--terracotta);
+      border-radius: var(--radius-lg);
+      padding: var(--space-8);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-4);
+      transition: transform var(--transition-base),
+                  box-shadow var(--transition-base);
+    }
+
+    .why-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    /* Icon circle */
+    .why-card__icon {
+      width: 52px;
+      height: 52px;
+      border-radius: var(--radius-full);
+      background-color: var(--sage-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      flex-shrink: 0;
+      border: 1px solid var(--border);
+    }
+
+    .why-card__title {
+      font-family: var(--font-heading);
+      font-size: var(--text-xl);
+      font-weight: var(--weight-semibold);
+      color: var(--forest);
+      line-height: var(--leading-snug);
+    }
+
+    .why-card__body {
+      font-size: var(--text-sm);
+      line-height: var(--leading-relaxed);
+      color: var(--gray);
+      flex: 1;
+    }
+
+    .why-card__cta {
+      font-size: var(--text-sm);
+      font-weight: var(--weight-semibold);
+      color: var(--terracotta);
+      text-decoration: none;
+      letter-spacing: var(--tracking-wide);
+      transition: color var(--transition-fast),
+                  letter-spacing var(--transition-fast);
+      display: inline-block;
+      margin-top: auto;
+    }
+
+    .why-card__cta:hover {
+      color: #8f5038;
+      letter-spacing: var(--tracking-wider);
+    }
+
+    /* ============================================================
        BREAKPOINTS — 768px (tablet)
     ============================================================ */
     @media (min-width: 768px) {
@@ -1164,6 +1278,10 @@
 
       .hero__headline {
         font-size: var(--text-5xl);
+      }
+
+      .why-tyse__grid {
+        grid-template-columns: 1fr 1fr;
       }
 
       .hero__stats-row {
@@ -1226,6 +1344,10 @@
 
       .hero__headline {
         font-size: var(--text-6xl);
+      }
+
+      .why-tyse__grid {
+        grid-template-columns: repeat(4, 1fr);
       }
 
       .footer__grid {
@@ -1463,6 +1585,57 @@
 
     </section>
     <!-- ==================== / SOCIAL PROOF BAR ==================== -->
+
+    <!-- ==================== WHY TYSE TUTORING ==================== -->
+    <section class="why-tyse" id="why-tyse">
+      <div class="container">
+
+        <!-- Section header -->
+        <div class="why-tyse__header">
+          <p class="why-tyse__eyebrow">Why Families Choose Tyse Tutoring</p>
+          <h2 class="why-tyse__headline">Tutoring Built Around How Your Student Learns</h2>
+          <p class="why-tyse__sub">Every student learns differently. Tyse Tutoring meets yours exactly where they are &mdash; and builds them up from there.</p>
+        </div>
+
+        <!-- Four cards -->
+        <div class="why-tyse__grid">
+
+          <!-- Card 1: Barton System -->
+          <article class="why-card">
+            <div class="why-card__icon" aria-hidden="true">📖</div>
+            <h3 class="why-card__title">Barton System Trained</h3>
+            <p class="why-card__body">Tyse is directly trained in the Barton Reading and Spelling System — one of the most respected structured literacy programs for students with dyslexia. Sessions follow a proven, multisensory sequence that builds real phonological skills from the ground up.</p>
+            <a href="#packages" class="why-card__cta">Learn about our approach →</a>
+          </article>
+
+          <!-- Card 2: Learning Differences -->
+          <article class="why-card">
+            <div class="why-card__icon" aria-hidden="true">🧠</div>
+            <h3 class="why-card__title">Learning Differences Specialist</h3>
+            <p class="why-card__body">Students with dyslexia, dyscalculia, or other learning differences need more than re-teaching — they need a different approach entirely. Tyse adjusts techniques, pacing, and presentation so the material actually clicks, not just gets covered.</p>
+            <a href="#packages" class="why-card__cta">See how we help →</a>
+          </article>
+
+          <!-- Card 3: Test Prep -->
+          <article class="why-card">
+            <div class="why-card__icon" aria-hidden="true">📝</div>
+            <h3 class="why-card__title">SAT, ACT &amp; Test Prep</h3>
+            <p class="why-card__body">Strategic standardized test prep that goes beyond content review. Students learn to manage time, decode question types, and apply targeted strategies — resulting in meaningful score gains with a plan that fits their timeline and goals.</p>
+            <a href="#packages" class="why-card__cta">Explore test prep →</a>
+          </article>
+
+          <!-- Card 4: Math & Science -->
+          <article class="why-card">
+            <div class="why-card__icon" aria-hidden="true">📐</div>
+            <h3 class="why-card__title">Math &amp; Science Depth</h3>
+            <p class="why-card__body">Real conceptual understanding, not just procedure memorization. From pre-algebra through college-level calculus, physics, and chemistry — Tyse helps students see the reasoning behind the math so they can solve problems they haven't seen before.</p>
+            <a href="#packages" class="why-card__cta">Book a session →</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+    <!-- ==================== / WHY TYSE TUTORING ==================== -->
 
   </main>
 
