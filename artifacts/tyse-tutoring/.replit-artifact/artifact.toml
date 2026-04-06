@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Tyse Tutoring"
+version = "1.0.0"
+id = "artifacts/tyse-tutoring"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 22865
+
+[services.development]
+run = "pnpm --filter @workspace/tyse-tutoring run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/tyse-tutoring", "run", "build" ]
+publicDir = "artifacts/tyse-tutoring/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "22865"
+BASE_PATH = "/"
