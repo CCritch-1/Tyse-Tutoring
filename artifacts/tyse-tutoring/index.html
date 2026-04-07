@@ -2,11 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tyse Tutoring | Boulder, CO</title>
-  <meta name="description" content="Tyse Tutoring — personalized academic tutoring in Boulder, CO. Expert tutors for K-12 and college students." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tyse Tutoring | SAT Prep &amp; Dyslexia Support | Boulder, CO</title>
+  <meta name="description" content="Boulder's specialist tutoring service for dyslexia, dyscalculia &amp; SAT/ACT prep. Students placed at 30+ top 50 US universities. 1-on-1 sessions via TutorFish." />
 
-  <!-- Google Fonts -->
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="Tyse Tutoring | SAT Prep &amp; Dyslexia Support | Boulder, CO" />
+  <meta property="og:description" content="Specialist 1-on-1 tutoring for dyslexia, dyscalculia, SAT/ACT prep, and math &amp; science. Serving Boulder, CO." />
+  <meta property="og:url"         content="https://tysetutoring.com" />
+  <meta name="twitter:card"       content="summary_large_image" />
+  <meta name="twitter:title"      content="Tyse Tutoring | Boulder, CO" />
+  <meta name="twitter:description" content="Expert 1-on-1 tutoring for dyslexia &amp; test prep in Boulder, CO." />
+
+  <!-- Google Fonts — font-display:swap is already in the URL param -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -2339,8 +2348,64 @@
     }
 
     /* ============================================================
+       SCROLL ANIMATIONS
+    ============================================================ */
+    [data-animate] {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    [data-animate].visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Staggered delay for grid children */
+    [data-animate][data-delay="1"] { transition-delay: 0.1s; }
+    [data-animate][data-delay="2"] { transition-delay: 0.2s; }
+    [data-animate][data-delay="3"] { transition-delay: 0.3s; }
+    [data-animate][data-delay="4"] { transition-delay: 0.4s; }
+
+    /* Respect user motion preference */
+    @media (prefers-reduced-motion: reduce) {
+      [data-animate] {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+    }
+
+    /* ============================================================
        BREAKPOINTS — 768px (tablet)
     ============================================================ */
+    /* Mobile touch targets — 48px minimum on small screens */
+    @media (max-width: 767px) {
+      .btn,
+      .btn-white,
+      .btn-white-outline {
+        min-height: 48px;
+        padding-top: var(--space-3);
+        padding-bottom: var(--space-3);
+      }
+
+      /* Featured pricing card: remove any scale on mobile */
+      .pricing-card--featured {
+        transform: none;
+      }
+
+      /* Hero headline floor */
+      .hero__headline {
+        font-size: clamp(2rem, 6vw, var(--text-5xl));
+      }
+
+      /* Footer collapses to 1 column */
+      .footer__grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+      }
+    }
+
     @media (min-width: 768px) {
       .container {
         padding-left: var(--space-6);
@@ -3504,6 +3569,82 @@
 
       sections.forEach(function (section) {
         observer.observe(section);
+      });
+    })();
+
+    // ---- Smooth scroll with 80px nav offset ----
+    (function () {
+      document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+        anchor.addEventListener('click', function (e) {
+          var targetId = anchor.getAttribute('href').slice(1);
+          var target   = document.getElementById(targetId);
+          if (!target) return;
+          e.preventDefault();
+          var offset = 80;
+          var top    = target.getBoundingClientRect().top + window.scrollY - offset;
+          window.scrollTo({ top: top, behavior: 'smooth' });
+          // Close mobile menu if open
+          var menu = document.getElementById('mobile-menu');
+          if (menu && menu.classList.contains('open')) {
+            menu.classList.remove('open');
+            var hamburger = document.getElementById('hamburger-btn');
+            if (hamburger) {
+              hamburger.classList.remove('open');
+              hamburger.setAttribute('aria-expanded', 'false');
+            }
+            document.body.style.overflow = '';
+          }
+        });
+      });
+    })();
+
+    // ---- Scroll-in animations (IntersectionObserver) ----
+    (function () {
+      var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (prefersReduced) return; // CSS already handles this, belt-and-suspenders
+
+      // Targets: cards, featured blocks, stat bars, approach columns
+      var selectors = [
+        '.why-card',
+        '.svc-card',
+        '.services__featured',
+        '.step-card',
+        '.our-approach__text',
+        '.our-approach__video-card',
+        '.testimonials__stats-bar',
+        '.testi-card',
+        '.pricing-card',
+        '.faq__item',
+      ];
+
+      var elements = document.querySelectorAll(selectors.join(','));
+
+      // Assign data-animate and stagger siblings within the same grid parent
+      elements.forEach(function (el) {
+        el.setAttribute('data-animate', 'true');
+      });
+
+      // Add stagger delays to grid siblings
+      document.querySelectorAll('.why-tyse__grid, .services__cards, .how-it-works__steps, .testimonials__grid, .packages__grid').forEach(function (grid) {
+        Array.from(grid.children).forEach(function (child, i) {
+          child.setAttribute('data-delay', String(i + 1 <= 4 ? i + 1 : 4));
+        });
+      });
+
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target); // fire once
+          }
+        });
+      }, {
+        rootMargin: '0px 0px -60px 0px',
+        threshold: 0.05
+      });
+
+      document.querySelectorAll('[data-animate]').forEach(function (el) {
+        observer.observe(el);
       });
     })();
 
