@@ -1608,6 +1608,124 @@
     }
 
     /* ============================================================
+       HOW IT WORKS SECTION
+    ============================================================ */
+    .how-it-works {
+      background-color: var(--cream);
+      padding: var(--space-16) 0;
+    }
+
+    .how-it-works__header {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto var(--space-14);
+    }
+
+    .how-it-works__eyebrow {
+      font-family: var(--font-body);
+      font-size: var(--text-xs);
+      font-weight: var(--weight-semibold);
+      letter-spacing: var(--tracking-widest);
+      text-transform: uppercase;
+      color: var(--terracotta);
+      margin-bottom: var(--space-3);
+    }
+
+    .how-it-works__headline {
+      font-family: var(--font-heading);
+      font-size: var(--text-4xl);
+      font-weight: var(--weight-bold);
+      line-height: var(--leading-tight);
+      letter-spacing: var(--tracking-tight);
+      color: var(--forest);
+    }
+
+    /* Steps grid */
+    .how-it-works__steps {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-6);
+      position: relative;
+      margin-bottom: var(--space-12);
+    }
+
+    /* Dashed connector line — desktop only, behind the badges */
+    .how-it-works__steps::before {
+      content: '';
+      display: none;
+      position: absolute;
+      top: 28px; /* vertically centered on the 56px badge */
+      left: calc(16.666% + 28px);  /* starts after left badge center */
+      right: calc(16.666% + 28px); /* ends before right badge center */
+      height: 1px;
+      border-top: 2px dashed var(--border);
+      z-index: 0;
+    }
+
+    /* Step card */
+    .step-card {
+      background-color: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-8);
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-4);
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Terracotta step number badge */
+    .step-card__badge {
+      width: 56px;
+      height: 56px;
+      border-radius: var(--radius-full);
+      background-color: var(--terracotta);
+      color: var(--white);
+      font-family: var(--font-heading);
+      font-size: var(--text-xl);
+      font-weight: var(--weight-bold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      box-shadow: 0 0 0 6px var(--cream);
+      margin-bottom: var(--space-1);
+    }
+
+    .step-card__title {
+      font-family: var(--font-heading);
+      font-size: var(--text-xl);
+      font-weight: var(--weight-semibold);
+      color: var(--forest);
+      line-height: var(--leading-snug);
+    }
+
+    .step-card__body {
+      font-size: var(--text-sm);
+      line-height: var(--leading-relaxed);
+      color: var(--gray);
+    }
+
+    /* Bottom CTA area */
+    .how-it-works__cta {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-4);
+      text-align: center;
+    }
+
+    .how-it-works__cta-note {
+      font-size: var(--text-sm);
+      color: var(--gray);
+      letter-spacing: var(--tracking-wide);
+    }
+
+    /* ============================================================
        BREAKPOINTS — 768px (tablet)
     ============================================================ */
     @media (min-width: 768px) {
@@ -1722,6 +1840,14 @@
 
       .our-approach__headline {
         font-size: var(--text-5xl);
+      }
+
+      .how-it-works__steps {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .how-it-works__steps::before {
+        display: block;
       }
 
       .footer__grid {
@@ -2131,6 +2257,53 @@
       </div>
     </section>
     <!-- ==================== / OUR APPROACH (BARTON METHOD) ==================== -->
+
+    <!-- ==================== HOW IT WORKS ==================== -->
+    <section class="how-it-works" id="how-it-works">
+      <div class="container">
+
+        <!-- Section header -->
+        <div class="how-it-works__header">
+          <p class="how-it-works__eyebrow">Getting Started Is Simple</p>
+          <h2 class="how-it-works__headline">Your Student Could Start Learning This Week</h2>
+        </div>
+
+        <!-- Three-step grid -->
+        <div class="how-it-works__steps">
+
+          <!-- Step 1 -->
+          <div class="step-card">
+            <div class="step-card__badge" aria-hidden="true">1</div>
+            <h3 class="step-card__title">Choose a Package</h3>
+            <p class="step-card__body">Review the session packages below and pick the one that fits your student&rsquo;s needs and schedule. Not sure which is right? The free consultation is a good place to start — there&rsquo;s no pressure to commit.</p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="step-card">
+            <div class="step-card__badge" aria-hidden="true">2</div>
+            <h3 class="step-card__title">Book Online Through TutorFish</h3>
+            <p class="step-card__body">All sessions are scheduled through TutorFish — a secure tutoring platform with simple online booking, session reminders, and easy rescheduling. You can view Tyse&rsquo;s availability and lock in your first appointment in a few minutes.</p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="step-card">
+            <div class="step-card__badge" aria-hidden="true">3</div>
+            <h3 class="step-card__title">Begin With a Purposeful First Session</h3>
+            <p class="step-card__body">The first session isn&rsquo;t filler — it&rsquo;s intentional. Tyse uses it to assess where your student actually is, understand how they learn best, and set a clear direction for what comes next. Students leave knowing exactly what they&rsquo;re working toward.</p>
+          </div>
+
+        </div>
+        <!-- / Three-step grid -->
+
+        <!-- Bottom CTA -->
+        <div class="how-it-works__cta">
+          <a href="#packages" class="btn btn-primary">Get Started Today</a>
+          <p class="how-it-works__cta-note">Sessions booked through TutorFish &middot; Secure online scheduling</p>
+        </div>
+
+      </div>
+    </section>
+    <!-- ==================== / HOW IT WORKS ==================== -->
 
   </main>
 
