@@ -1460,6 +1460,154 @@
     }
 
     /* ============================================================
+       BARTON METHOD / OUR APPROACH SECTION
+    ============================================================ */
+    .our-approach {
+      background-color: var(--forest);
+      padding: var(--space-16) 0;
+    }
+
+    .our-approach__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-12);
+      align-items: start;
+    }
+
+    /* Left: text column */
+    .our-approach__eyebrow {
+      font-family: var(--font-body);
+      font-size: var(--text-xs);
+      font-weight: var(--weight-semibold);
+      letter-spacing: var(--tracking-widest);
+      text-transform: uppercase;
+      color: var(--terracotta);
+      margin-bottom: var(--space-3);
+    }
+
+    .our-approach__headline {
+      font-family: var(--font-heading);
+      font-size: var(--text-4xl);
+      font-weight: var(--weight-bold);
+      line-height: var(--leading-tight);
+      letter-spacing: var(--tracking-tight);
+      color: var(--white);
+      margin-bottom: var(--space-6);
+    }
+
+    .our-approach__body {
+      font-size: var(--text-base);
+      line-height: var(--leading-relaxed);
+      color: var(--terracotta-light);
+      margin-bottom: var(--space-4);
+    }
+
+    .our-approach__body:last-of-type {
+      margin-bottom: var(--space-8);
+    }
+
+    /* Differentiator pills */
+    .our-approach__pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-3);
+      margin-bottom: var(--space-8);
+    }
+
+    .approach-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      background-color: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: var(--radius-full);
+      padding: var(--space-2) var(--space-4);
+      font-size: var(--text-xs);
+      font-weight: var(--weight-semibold);
+      letter-spacing: var(--tracking-wide);
+      color: var(--terracotta-light);
+    }
+
+    .approach-pill__dot {
+      width: 6px;
+      height: 6px;
+      border-radius: var(--radius-full);
+      background-color: var(--terracotta);
+      flex-shrink: 0;
+    }
+
+    /* Right: video placeholder card */
+    .our-approach__video-card {
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+    }
+
+    .video-card__media {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background-color: rgba(0, 0, 0, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .video-card__play {
+      width: 60px;
+      height: 60px;
+      border-radius: var(--radius-full);
+      background-color: var(--terracotta);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 0 12px rgba(173, 107, 75, 0.2);
+      transition: transform var(--transition-base),
+                  box-shadow var(--transition-base);
+      cursor: pointer;
+    }
+
+    .video-card__play:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 0 16px rgba(173, 107, 75, 0.25);
+    }
+
+    .video-card__play-icon {
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 10px 0 10px 18px;
+      border-color: transparent transparent transparent var(--white);
+      margin-left: 4px;
+    }
+
+    .video-card__content {
+      padding: var(--space-6);
+    }
+
+    .video-card__label {
+      font-family: var(--font-heading);
+      font-size: var(--text-lg);
+      font-weight: var(--weight-semibold);
+      color: var(--white);
+      margin-bottom: var(--space-2);
+    }
+
+    .video-card__desc {
+      font-size: var(--text-sm);
+      line-height: var(--leading-relaxed);
+      color: var(--terracotta-light);
+      margin-bottom: var(--space-3);
+    }
+
+    .video-card__placeholder {
+      font-size: var(--text-xs);
+      font-style: italic;
+      color: var(--sage);
+    }
+
+    /* ============================================================
        BREAKPOINTS — 768px (tablet)
     ============================================================ */
     @media (min-width: 768px) {
@@ -1565,6 +1713,15 @@
       .services__featured {
         grid-template-columns: 1fr 0.55fr;
         align-items: start;
+      }
+
+      .our-approach__grid {
+        grid-template-columns: 1fr 0.75fr;
+        align-items: center;
+      }
+
+      .our-approach__headline {
+        font-size: var(--text-5xl);
       }
 
       .footer__grid {
@@ -1921,6 +2078,59 @@
       </div>
     </section>
     <!-- ==================== / SERVICES ==================== -->
+
+    <!-- ==================== OUR APPROACH (BARTON METHOD) ==================== -->
+    <section class="our-approach" id="our-approach">
+      <div class="container">
+        <div class="our-approach__grid">
+
+          <!-- Left: text column -->
+          <div class="our-approach__text">
+            <p class="our-approach__eyebrow">Our Approach</p>
+            <h2 class="our-approach__headline">What Is the Barton Reading &amp; Spelling System?</h2>
+
+            <p class="our-approach__body">The Barton Reading and Spelling System is one of the most widely respected structured literacy programs available for students with dyslexia and related language-based learning differences. Developed specifically for students who struggle with traditional reading instruction, Barton uses a carefully sequenced, multisensory approach — sight, sound, and movement together — to build lasting phonological awareness, decoding skills, and spelling accuracy from the ground up.</p>
+
+            <p class="our-approach__body">Unlike programs that expose students to material and hope repetition leads to retention, Barton is mastery-based: students do not advance until they have genuinely internalized each skill. This is a fundamental design choice. It means sessions move at the pace the student actually needs, not the pace a curriculum schedule demands. Progress is real, not performed.</p>
+
+            <p class="our-approach__body">Tyse is directly trained in the Barton methodology — not self-taught, not workshop-certified, but trained with hands-on practice in the actual system. That training shapes every session: the sequencing of instruction, the way errors are addressed, the way concepts are revisited and reinforced. Students who have tried other tutors and felt stuck often describe a noticeable difference in how the material finally starts to connect.</p>
+
+            <div class="our-approach__pills">
+              <span class="approach-pill">
+                <span class="approach-pill__dot"></span>
+                Multisensory Instruction
+              </span>
+              <span class="approach-pill">
+                <span class="approach-pill__dot"></span>
+                Sequential Mastery
+              </span>
+              <span class="approach-pill">
+                <span class="approach-pill__dot"></span>
+                Dyslexia-Focused Design
+              </span>
+            </div>
+
+            <a href="#packages" class="btn btn-primary">Book a Free Consultation</a>
+          </div>
+
+          <!-- Right: video placeholder card -->
+          <div class="our-approach__video-card">
+            <div class="video-card__media">
+              <div class="video-card__play" role="img" aria-label="Video play button">
+                <div class="video-card__play-icon"></div>
+              </div>
+            </div>
+            <div class="video-card__content">
+              <p class="video-card__label">Watch: Meet Your Tutor</p>
+              <p class="video-card__desc">Hear directly from Tyse about his training in the Barton system, his teaching philosophy, and why he works exclusively with students who learn differently.</p>
+              <p class="video-card__placeholder">[Replace with Vimeo or YouTube embed]</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- ==================== / OUR APPROACH (BARTON METHOD) ==================== -->
 
   </main>
 
