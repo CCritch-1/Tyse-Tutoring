@@ -1815,6 +1815,7 @@
       grid-template-columns: 1fr;
       gap: var(--space-5);
       margin-bottom: var(--space-8);
+      padding: 0 var(--space-2);
     }
 
     /* Card */
@@ -1822,11 +1823,13 @@
       background-color: var(--white);
       border: 1px solid var(--border);
       border-radius: var(--radius-lg);
-      padding: var(--space-7);
+      padding: var(--space-8);
       box-shadow: var(--shadow-sm);
       display: flex;
       flex-direction: column;
+      align-items: flex-start;
       gap: var(--space-4);
+      height: 100%;
     }
 
     .testi-card__stars {
@@ -1908,6 +1911,200 @@
 
     .testimonials__notice strong {
       color: var(--forest);
+    }
+
+    /* ============================================================
+       PACKAGES & PRICING SECTION
+    ============================================================ */
+    .packages {
+      background-color: var(--cream);
+      padding: var(--space-16) 0;
+    }
+
+    .packages__header {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto var(--space-10);
+    }
+
+    .packages__eyebrow {
+      font-family: var(--font-body);
+      font-size: var(--text-xs);
+      font-weight: var(--weight-semibold);
+      letter-spacing: var(--tracking-widest);
+      text-transform: uppercase;
+      color: var(--terracotta);
+      margin-bottom: var(--space-3);
+    }
+
+    .packages__headline {
+      font-family: var(--font-heading);
+      font-size: var(--text-4xl);
+      font-weight: var(--weight-bold);
+      line-height: var(--leading-tight);
+      letter-spacing: var(--tracking-tight);
+      color: var(--forest);
+      margin-bottom: var(--space-3);
+    }
+
+    .packages__sub {
+      font-size: var(--text-base);
+      line-height: var(--leading-relaxed);
+      color: var(--gray);
+    }
+
+    /* Grid wrapper with top padding so featured badge isn't clipped */
+    .packages__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-5);
+      padding-top: 1.75rem;
+      align-items: start;
+      margin-bottom: var(--space-6);
+    }
+
+    /* ---- Base pricing card ---- */
+    .pricing-card {
+      background-color: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: var(--space-8);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-5);
+      position: relative;
+    }
+
+    .pricing-card__eyebrow {
+      font-size: var(--text-xs);
+      font-weight: var(--weight-semibold);
+      letter-spacing: var(--tracking-widest);
+      text-transform: uppercase;
+      color: var(--sage);
+    }
+
+    .pricing-card__title {
+      font-family: var(--font-heading);
+      font-size: var(--text-2xl);
+      font-weight: var(--weight-bold);
+      color: var(--forest);
+      line-height: var(--leading-snug);
+      margin-bottom: var(--space-1);
+    }
+
+    .pricing-card__tagline {
+      font-style: italic;
+      font-size: var(--text-sm);
+      color: var(--gray);
+      line-height: var(--leading-relaxed);
+    }
+
+    .pricing-card__price {
+      font-family: var(--font-heading);
+      font-size: var(--text-4xl);
+      font-weight: var(--weight-bold);
+      color: var(--forest);
+      line-height: 1;
+    }
+
+    .pricing-card__price-note {
+      font-size: var(--text-xs);
+      color: var(--gray);
+      margin-top: var(--space-1);
+    }
+
+    .pricing-card__divider {
+      height: 1px;
+      background-color: var(--border);
+    }
+
+    /* Feature list */
+    .pricing-card__features {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-3);
+      flex: 1;
+    }
+
+    .pricing-feature {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-3);
+      font-size: var(--text-sm);
+      line-height: var(--leading-relaxed);
+      color: var(--gray);
+    }
+
+    .pricing-feature__check {
+      color: var(--terracotta);
+      font-size: 1rem;
+      line-height: 1.4;
+      flex-shrink: 0;
+    }
+
+    /* ---- Featured card overrides ---- */
+    .pricing-card--featured {
+      background-color: var(--forest);
+      border: 2px solid var(--terracotta);
+      box-shadow: var(--shadow-xl);
+    }
+
+    .pricing-card--featured .pricing-card__eyebrow {
+      color: var(--sage);
+    }
+
+    .pricing-card--featured .pricing-card__title {
+      color: var(--white);
+    }
+
+    .pricing-card--featured .pricing-card__tagline {
+      color: var(--terracotta-light);
+    }
+
+    .pricing-card--featured .pricing-card__price {
+      color: var(--white);
+    }
+
+    .pricing-card--featured .pricing-card__price-note {
+      color: var(--terracotta-light);
+    }
+
+    .pricing-card--featured .pricing-card__divider {
+      background-color: rgba(255, 255, 255, 0.12);
+    }
+
+    .pricing-card--featured .pricing-feature {
+      color: var(--terracotta-light);
+    }
+
+    .pricing-card--featured .pricing-feature__check {
+      color: var(--terracotta);
+    }
+
+    /* Featured badge — sits above the card */
+    .pricing-card__badge {
+      position: absolute;
+      top: -1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: var(--terracotta);
+      color: var(--white);
+      font-size: var(--text-xs);
+      font-weight: var(--weight-bold);
+      letter-spacing: var(--tracking-widest);
+      text-transform: uppercase;
+      padding: var(--space-1) var(--space-4);
+      border-radius: var(--radius-full);
+      white-space: nowrap;
+    }
+
+    /* Disclaimer */
+    .packages__disclaimer {
+      text-align: center;
+      font-size: var(--text-xs);
+      color: var(--gray);
+      line-height: var(--leading-relaxed);
     }
 
     /* ============================================================
@@ -2063,6 +2260,10 @@
 
       .stat-item:not(:last-child) {
         border-right: 1px solid rgba(255, 255, 255, 0.12);
+      }
+
+      .packages__grid {
+        grid-template-columns: repeat(3, 1fr);
       }
 
       .footer__grid {
@@ -2612,6 +2813,152 @@
       </div>
     </section>
     <!-- ==================== / TESTIMONIALS & RESULTS ==================== -->
+
+    <!-- ==================== PACKAGES & PRICING ==================== -->
+    <section class="packages" id="packages">
+      <div class="container">
+
+        <!-- Header -->
+        <div class="packages__header">
+          <p class="packages__eyebrow">Packages &amp; Pricing</p>
+          <h2 class="packages__headline">Flexible Packages Booked Through TutorFish</h2>
+          <p class="packages__sub">All sessions are scheduled and managed through TutorFish. Choose the package that fits your student&rsquo;s goals — or start with a free consultation to figure out which is right.</p>
+        </div>
+
+        <!-- Pricing grid -->
+        <div class="packages__grid">
+
+          <!-- Card 1: Foundations -->
+          <div class="pricing-card">
+            <div>
+              <p class="pricing-card__eyebrow">Structured Literacy &amp; Learning Support</p>
+              <h3 class="pricing-card__title">Foundations</h3>
+              <p class="pricing-card__tagline">For students building core reading, spelling, or math skills from the ground up.</p>
+            </div>
+            <div>
+              <p class="pricing-card__price">From $[X]</p>
+              <p class="pricing-card__price-note">per session &mdash; packages available</p>
+            </div>
+            <div class="pricing-card__divider"></div>
+            <ul class="pricing-card__features" role="list">
+              <li class="pricing-feature">
+                <span class="pricing-feature__check" aria-hidden="true">&#10003;</span>
+                Barton Reading &amp; Spelling System instruction
+              </li>
+              <li class="pricing-feature">
+                <span class="pricing-feature__check" aria-hidden="true">&#10003;</span>
+                Multisensory, mastery-based pacing
+              </li>
+              <li class="pricing-feature">
+                <span class="pricing-feature__check" aria-hidden="true">&#10003;</span>
+                Dyslexia and dyscalculia support
+              </li>
+              <li class="pricing-feature">
+                <span class="pricing-feature__check" aria-hidden="true">&#10003;</span>
+                Session notes and progress tracking
+              </li>
+              <li class="pricing-feature">
+                <span class="pricing-feature__check" aria-hidden="true">&#10003;</span>
+                Flexible scheduling via TutorFish
+              </li>
+            </ul>
+            <a href="https://tutorfish.com" target="_blank" rel="noopener" class="btn btn-secondary" style="width:100%;text-align:center;">Book Through TutorFish</a>
+          </div>
+
+          <!-- Card 2: Test Prep Intensive (Featured) -->
+          <div class="pricing-card pricing-card--featured">
+            <span class="pricing-card__badge">&#11088; Most Popular</span>
+            <div>
+              <p class="pricing-card__eyebrow">SAT &middot; ACT &middot; Standardized Tests</p>
+              <h3 class="pricing-card__title">Test Prep Intensive</h3>
+              <p class="pricing-card__tagline">For students targeting meaningful score gains before their next test date.</p>
+            </div>
+            <div>
+              <p class="pricing-card__price">From $[X]</p>
+              <p class="pricing-card__price-note">per session &mdash; multi-session packages available</p>
+            </div>
+            <div class="pricing-card__divider"></div>
+            <ul class="pricing-card__features" role="list">
+              <li class="pricing-feature">
+                <span class="pricing-feature__check" aria-hidden="true">&#10003;</span>
+                Diagnostic baseline assessment
+              </li>
+              <li class="pricing-feature">
+                <span class="pricing-feature__check" aria-hidden="true">&#10003;</span>
+                Customized prep plan around your test date
+              </li>
+              <li class="pricing-feature">
+                <span class="pricing-feature__check" aria-hidden="true">&#10003;</span>
+                Section-by-section strategy: Reading, Writing, Math
+              </li>
+              <li class="pricing-feature">
+                <span class="pricing-feature__check" aria-hidden="true">&#10003;</span>
+                Adapted techniques for students with dyslexia
+              </li>
+              <li class="pricing-feature">
+                <span class="pricing-feature__check" aria-hidden="true">&#10003;</span>
+                Full-length timed practice tests with review
+              </li>
+              <li class="pricing-feature">
+                <span class="pricing-feature__check" aria-hidden="true">&#10003;</span>
+                Score progress tracking across sessions
+              </li>
+            </ul>
+            <a href="https://tutorfish.com" target="_blank" rel="noopener" class="btn btn-primary" style="width:100%;text-align:center;">Book Through TutorFish</a>
+          </div>
+
+          <!-- Card 3: Deep Support -->
+          <div class="pricing-card">
+            <div>
+              <p class="pricing-card__eyebrow">Math &amp; Science &middot; Multi-Subject</p>
+              <h3 class="pricing-card__title">Deep Support</h3>
+              <p class="pricing-card__tagline">For students who need ongoing, in-depth help across multiple subjects or levels.</p>
+            </div>
+            <div>
+              <p class="pricing-card__price">From $[X]</p>
+              <p class="pricing-card__price-note">per session &mdash; packages available</p>
+            </div>
+            <div class="pricing-card__divider"></div>
+            <ul class="pricing-card__features" role="list">
+              <li class="pricing-feature">
+                <span class="pricing-feature__check" aria-hidden="true">&#10003;</span>
+                Pre-algebra through college-level math
+              </li>
+              <li class="pricing-feature">
+                <span class="pricing-feature__check" aria-hidden="true">&#10003;</span>
+                Physics and chemistry conceptual depth
+              </li>
+              <li class="pricing-feature">
+                <span class="pricing-feature__check" aria-hidden="true">&#10003;</span>
+                Structured literacy support alongside STEM
+              </li>
+              <li class="pricing-feature">
+                <span class="pricing-feature__check" aria-hidden="true">&#10003;</span>
+                Adapted for processing and learning differences
+              </li>
+              <li class="pricing-feature">
+                <span class="pricing-feature__check" aria-hidden="true">&#10003;</span>
+                Coordinated multi-subject session planning
+              </li>
+              <li class="pricing-feature">
+                <span class="pricing-feature__check" aria-hidden="true">&#10003;</span>
+                Regular progress notes for parents
+              </li>
+            </ul>
+            <a href="https://tutorfish.com" target="_blank" rel="noopener" class="btn btn-secondary" style="width:100%;text-align:center;">Book Through TutorFish</a>
+          </div>
+
+        </div>
+        <!-- / Pricing grid -->
+
+        <!-- Disclaimer -->
+        <p class="packages__disclaimer">
+          <strong>&#128204; Update before publishing:</strong> Replace <code>$[X]</code> placeholders with your actual session rates and package details. Accurate pricing builds trust and reduces back-and-forth with inquiring families.
+        </p>
+
+      </div>
+    </section>
+    <!-- ==================== / PACKAGES & PRICING ==================== -->
 
   </main>
 
