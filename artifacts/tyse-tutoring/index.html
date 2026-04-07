@@ -2567,6 +2567,62 @@
         gap: var(--space-12);
       }
     }
+
+    /* ============================================================
+       BLUR-TO-FOCUS ANIMATION — hero moments only
+    ============================================================ */
+
+    @keyframes blurToFocus {
+      from {
+        opacity: 0;
+        filter: blur(8px);
+        transform: translateY(12px);
+      }
+      to {
+        opacity: 1;
+        filter: blur(0px);
+        transform: translateY(0);
+      }
+    }
+
+    /* Base hidden state — applied via class in HTML */
+    .blur-focus {
+      opacity: 0;
+      filter: blur(8px);
+      transform: translateY(12px);
+      will-change: opacity, filter, transform;
+    }
+
+    /* Revealed state — added by IntersectionObserver */
+    .blur-focus.revealed {
+      opacity: 1;
+      filter: blur(0px);
+      transform: translateY(0);
+      transition:
+        opacity  0.65s cubic-bezier(0.25, 0.46, 0.45, 0.94) var(--bf-delay, 0s),
+        filter   0.65s cubic-bezier(0.25, 0.46, 0.45, 0.94) var(--bf-delay, 0s),
+        transform 0.65s cubic-bezier(0.25, 0.46, 0.45, 0.94) var(--bf-delay, 0s);
+    }
+
+    /* Stagger delay variants */
+    .bf-delay-1 { --bf-delay: 0.10s; }
+    .bf-delay-2 { --bf-delay: 0.25s; }
+    .bf-delay-3 { --bf-delay: 0.45s; }
+    .bf-delay-4 { --bf-delay: 0.65s; }
+    .bf-delay-5 { --bf-delay: 0.85s; }
+    .bf-delay-6 { --bf-delay: 1.10s; }
+
+    /* Reduced-motion: skip all blur-focus animations */
+    @media (prefers-reduced-motion: reduce) {
+      .blur-focus,
+      .blur-focus.revealed {
+        opacity: 1 !important;
+        filter: none !important;
+        transform: none !important;
+        transition: none !important;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -2650,20 +2706,20 @@
           <!-- Left: Copy -->
           <div class="hero__left">
 
-            <p class="hero__eyebrow">
+            <p class="hero__eyebrow blur-focus bf-delay-1">
               Expert Tutoring for Every Kind of Learner &mdash; Boulder, CO
             </p>
 
-            <h1 class="hero__headline">
+            <h1 class="hero__headline blur-focus bf-delay-2">
               Finally &mdash; A Tutor Who Gets How Your Student Actually Thinks
             </h1>
 
-            <p class="hero__subheadline">
+            <p class="hero__subheadline blur-focus bf-delay-3">
               Tyse Tutoring in Boulder, CO specializes in 1-on-1 sessions for middle school, high school, and college students &mdash; with proven results across dyslexia, dyscalculia, SAT/ACT prep, and math and science. Our students have been placed at 30+ of the top 50 universities in the US.
             </p>
 
             <!-- Social proof -->
-            <div class="hero__proof">
+            <div class="hero__proof blur-focus bf-delay-4">
               <div class="hero__proof-stars" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
@@ -2675,7 +2731,7 @@
             </div>
 
             <!-- CTAs -->
-            <div class="hero__ctas">
+            <div class="hero__ctas blur-focus bf-delay-5">
               <a href="#book-now" class="btn btn-primary btn-lg">
                 Book Your Session
               </a>
@@ -2688,7 +2744,7 @@
 
           <!-- Right: Video placeholder card -->
           <div class="hero__right">
-            <div class="hero__video-card">
+            <div class="hero__video-card blur-focus bf-delay-3">
 
               <button class="hero__play-btn" aria-label="Play tutor introduction video">
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="white" aria-hidden="true">
@@ -2710,7 +2766,7 @@
         </div>
 
         <!-- Stats bar -->
-        <div class="hero__stats">
+        <div class="hero__stats blur-focus bf-delay-6">
           <div class="hero__stats-row">
 
             <div class="hero__stat">
@@ -2926,16 +2982,16 @@
 
           <!-- Left: text column -->
           <div class="our-approach__text">
-            <p class="our-approach__eyebrow">Our Approach</p>
-            <h2 class="our-approach__headline">What Is the Barton Reading &amp; Spelling System?</h2>
+            <p class="our-approach__eyebrow blur-focus bf-delay-1">Our Approach</p>
+            <h2 class="our-approach__headline blur-focus bf-delay-2">What Is the Barton Reading &amp; Spelling System?</h2>
 
-            <p class="our-approach__body">The Barton Reading and Spelling System is one of the most widely respected structured literacy programs available for students with dyslexia and related language-based learning differences. Developed specifically for students who struggle with traditional reading instruction, Barton uses a carefully sequenced, multisensory approach — sight, sound, and movement together — to build lasting phonological awareness, decoding skills, and spelling accuracy from the ground up.</p>
+            <p class="our-approach__body blur-focus bf-delay-3">The Barton Reading and Spelling System is one of the most widely respected structured literacy programs available for students with dyslexia and related language-based learning differences. Developed specifically for students who struggle with traditional reading instruction, Barton uses a carefully sequenced, multisensory approach — sight, sound, and movement together — to build lasting phonological awareness, decoding skills, and spelling accuracy from the ground up.</p>
 
             <p class="our-approach__body">Unlike programs that expose students to material and hope repetition leads to retention, Barton is mastery-based: students do not advance until they have genuinely internalized each skill. This is a fundamental design choice. It means sessions move at the pace the student actually needs, not the pace a curriculum schedule demands. Progress is real, not performed.</p>
 
             <p class="our-approach__body">Tyse is directly trained in the Barton methodology — not self-taught, not workshop-certified, but trained with hands-on practice in the actual system. That training shapes every session: the sequencing of instruction, the way errors are addressed, the way concepts are revisited and reinforced. Students who have tried other tutors and felt stuck often describe a noticeable difference in how the material finally starts to connect.</p>
 
-            <div class="our-approach__pills">
+            <div class="our-approach__pills blur-focus bf-delay-4">
               <span class="approach-pill">
                 <span class="approach-pill__dot"></span>
                 Multisensory Instruction
@@ -2950,11 +3006,11 @@
               </span>
             </div>
 
-            <a href="#packages" class="btn btn-primary">Book a Free Consultation</a>
+            <a href="#packages" class="btn btn-primary blur-focus bf-delay-5">Book a Free Consultation</a>
           </div>
 
           <!-- Right: video placeholder card -->
-          <div class="our-approach__video-card">
+          <div class="our-approach__video-card blur-focus bf-delay-3">
             <div class="video-card__media">
               <div class="video-card__play" role="img" aria-label="Video play button">
                 <div class="video-card__play-icon"></div>
@@ -3359,13 +3415,13 @@
       <div class="container">
         <div class="cta-banner__inner">
 
-          <h2 class="cta-banner__headline">Your Student Is Capable of More Than They Know.<br>Let&rsquo;s Show Them That Together.</h2>
+          <h2 class="cta-banner__headline blur-focus bf-delay-1">Your Student Is Capable of More Than They Know.<br>Let&rsquo;s Show Them That Together.</h2>
 
-          <p class="cta-banner__sub">Whether your student needs to crack the SAT, build real reading skills after years of struggle with dyslexia, find their footing in math or science, or simply gain the kind of confidence that changes how they show up in school — this is where that starts.</p>
+          <p class="cta-banner__sub blur-focus bf-delay-2">Whether your student needs to crack the SAT, build real reading skills after years of struggle with dyslexia, find their footing in math or science, or simply gain the kind of confidence that changes how they show up in school — this is where that starts.</p>
 
-          <p class="cta-banner__proof">Students placed at MIT &middot; Harvard &middot; Stanford &middot; Duke &middot; and 26 other top universities</p>
+          <p class="cta-banner__proof blur-focus bf-delay-3">Students placed at MIT &middot; Harvard &middot; Stanford &middot; Duke &middot; and 26 other top universities</p>
 
-          <div class="cta-banner__buttons">
+          <div class="cta-banner__buttons blur-focus bf-delay-4">
             <a href="https://www.tutorfish.com" target="_blank" rel="noopener" class="btn-white">Book Now</a>
             <a href="#packages" class="btn-white-outline">View Packages</a>
           </div>
@@ -3647,6 +3703,27 @@
 
       document.querySelectorAll('[data-animate]').forEach(function (el) {
         observer.observe(el);
+      });
+    })();
+
+    // ---- Blur-to-focus IntersectionObserver ----
+    (function () {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+      var bfObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            bfObserver.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.15,
+        rootMargin: '0px 0px -40px 0px'
+      });
+
+      document.querySelectorAll('.blur-focus').forEach(function (el) {
+        bfObserver.observe(el);
       });
     })();
 
