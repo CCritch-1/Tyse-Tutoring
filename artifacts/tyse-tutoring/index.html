@@ -1618,7 +1618,7 @@
     .how-it-works__header {
       text-align: center;
       max-width: 600px;
-      margin: 0 auto var(--space-14);
+      margin: 0 auto var(--space-8);
     }
 
     .how-it-works__eyebrow {
@@ -1644,9 +1644,9 @@
     .how-it-works__steps {
       display: grid;
       grid-template-columns: 1fr;
-      gap: var(--space-6);
+      gap: var(--space-4);
       position: relative;
-      margin-bottom: var(--space-12);
+      margin-bottom: var(--space-8);
     }
 
     /* Dashed connector line — desktop only, behind the badges */
@@ -1654,10 +1654,10 @@
       content: '';
       display: none;
       position: absolute;
-      top: 28px; /* vertically centered on the 56px badge */
-      left: calc(16.666% + 28px);  /* starts after left badge center */
-      right: calc(16.666% + 28px); /* ends before right badge center */
-      height: 1px;
+      top: 27px; /* half of 54px badge = center */
+      left: calc(16.666% + 27px);
+      right: calc(16.666% + 27px);
+      height: 0;
       border-top: 2px dashed var(--border);
       z-index: 0;
     }
@@ -1667,21 +1667,21 @@
       background-color: var(--white);
       border: 1px solid var(--border);
       border-radius: var(--radius-lg);
-      padding: var(--space-8);
+      padding: var(--space-6);
       text-align: center;
       box-shadow: var(--shadow-sm);
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: var(--space-4);
+      gap: var(--space-3);
       position: relative;
       z-index: 1;
     }
 
     /* Terracotta step number badge */
     .step-card__badge {
-      width: 56px;
-      height: 56px;
+      width: 54px;
+      height: 54px;
       border-radius: var(--radius-full);
       background-color: var(--terracotta);
       color: var(--white);
@@ -1692,8 +1692,8 @@
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
-      box-shadow: 0 0 0 6px var(--cream);
-      margin-bottom: var(--space-1);
+      box-shadow: 0 0 0 5px var(--cream);
+      margin-bottom: 0;
     }
 
     .step-card__title {
