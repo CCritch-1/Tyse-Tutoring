@@ -812,14 +812,9 @@
       background: rgba(255, 255, 255, 0.08);
       border: 1px solid rgba(255, 255, 255, 0.15);
       border-radius: var(--radius-lg);
-      padding: 2rem;
-      min-height: 320px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: var(--space-5);
-      text-align: center;
+      overflow: hidden;
+      aspect-ratio: 16 / 9;
+      display: block;
     }
 
     .hero__play-btn {
@@ -2744,22 +2739,17 @@
 
           <!-- Right: Video placeholder card -->
           <div class="hero__right">
-            <div class="hero__video-card blur-focus bf-delay-3">
-
-              <button class="hero__play-btn" aria-label="Play tutor introduction video">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="white" aria-hidden="true">
-                  <polygon points="5 3 19 12 5 21 5 3"/>
-                </svg>
-              </button>
-
-              <p class="hero__card-title">Meet Your Tutor</p>
-
-              <p class="hero__card-desc">
-                Watch how Tyse Tutoring approaches learning differences and test prep
-              </p>
-
-              <p class="hero__card-note">[Replace with embedded video]</p>
-
+            <div class="hero__video-card blur-focus bf-delay-3" style="padding:0;overflow:hidden;">
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/JLAwhgteEvU"
+                title="Meet Your Tutor — Tyse Tutoring"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                style="display:block;width:100%;height:100%;border-radius:inherit;">
+              </iframe>
             </div>
           </div>
 
