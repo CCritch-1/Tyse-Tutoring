@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tyse Tutoring | SAT Prep &amp; Dyslexia Support | Boulder, CO</title>
+  <meta name="description" content="Boulder's specialist tutoring service for dyslexia, dyscalculia &amp; SAT/ACT prep. Students placed at 30+ top 50 US universities. 1-on-1 sessions via TutorFish." />
+
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="Tyse Tutoring | SAT Prep &amp; Dyslexia Support | Boulder, CO" />
+  <meta property="og:description" content="Specialist 1-on-1 tutoring for dyslexia, dyscalculia, SAT/ACT prep, and math &amp; science. Serving Boulder, CO." />
+  <meta property="og:url"         content="https://tysetutoring.com" />
+  <meta name="twitter:card"       content="summary_large_image" />
+  <meta name="twitter:title"      content="Tyse Tutoring | Boulder, CO" />
+  <meta name="twitter:description" content="Expert 1-on-1 tutoring for dyslexia &amp; test prep in Boulder, CO." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --forest:           #264025;
+      --terracotta:       #AD6B4B;
+      --terracotta-light: #DDCBB7;
+      --sage:             #82896E;
+      --sage-light:       #F5EDD7;
+      --dark:             #000000;
+      --gray:             #BA986D;
+      --cream:            #F5EDD7;
+      --white:            #FFFFFF;
+      --border:           #DDCBB7;
+      --font-heading: 'Playfair Display', Georgia, serif;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --text-xs:0.75rem;--text-sm:0.875rem;--text-base:1rem;--text-lg:1.125rem;--text-xl:1.25rem;--text-2xl:1.5rem;--text-3xl:1.875rem;--text-4xl:2.25rem;--text-5xl:3rem;--text-6xl:3.75rem;
+      --leading-tight:1.2;--leading-snug:1.375;--leading-normal:1.5;--leading-relaxed:1.625;
+      --tracking-tight:-0.025em;--tracking-wide:0.025em;--tracking-wider:0.05em;--tracking-widest:0.1em;
+      --weight-light:300;--weight-regular:400;--weight-medium:500;--weight-semibold:600;--weight-bold:700;
+      --space-1:0.25rem;--space-2:0.5rem;--space-3:0.75rem;--space-4:1rem;--space-5:1.25rem;--space-6:1.5rem;--space-8:2rem;--space-10:2.5rem;--space-12:3rem;--space-16:4rem;--space-20:5rem;--space-24:6rem;--space-32:8rem;--space-xl:5rem;--space-2xl:7rem;
+      --radius-sm:0.25rem;--radius-md:0.5rem;--radius-lg:0.75rem;--radius-xl:1rem;--radius-2xl:1.5rem;--radius-full:9999px;
+      --shadow-sm:0 1px 3px 0 rgba(0,0,0,.10),0 1px 2px -1px rgba(0,0,0,.10);--shadow-md:0 4px 6px -1px rgba(0,0,0,.10),0 2px 4px -2px rgba(0,0,0,.10);--shadow-lg:0 10px 15px -3px rgba(0,0,0,.10),0 4px 6px -4px rgba(0,0,0,.10);--shadow-xl:0 20px 25px -5px rgba(0,0,0,.10),0 8px 10px -6px rgba(0,0,0,.10);
+      --container-xl:1200px;
+      --nav-height:72px;--nav-height-mobile:64px;
+      --transition-fast:150ms ease;--transition-base:250ms ease;--transition-slow:400ms ease;
+      --z-sticky:200;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;font-size:16px;-webkit-text-size-adjust:100%;}
+    body{font-family:var(--font-body);font-size:var(--text-base);font-weight:var(--weight-regular);line-height:var(--leading-normal);color:var(--dark);background-color:var(--white);-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+    img,video{max-width:100%;display:block;}
+    a{color:inherit;text-decoration:none;}
+    ul,ol{list-style:none;}
+    button{font-family:inherit;cursor:pointer;border:none;background:none;}
+
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:var(--space-2);padding:var(--space-3) var(--space-6);font-family:var(--font-body);font-size:var(--text-base);font-weight:var(--weight-semibold);line-height:1;letter-spacing:var(--tracking-wide);border-radius:var(--radius-md);border:2px solid transparent;cursor:pointer;transition:background-color var(--transition-base),color var(--transition-base),border-color var(--transition-base),box-shadow var(--transition-base),transform var(--transition-fast);text-decoration:none;white-space:nowrap;user-select:none;}
+    .btn:active{transform:translateY(1px);}
+    .btn-primary{background-color:var(--terracotta);color:var(--white);border-color:var(--terracotta);}
+    .btn-primary:hover{background-color:#8f5038;border-color:#8f5038;box-shadow:var(--shadow-md);}
+    .btn-secondary{background-color:var(--forest);color:var(--white);border-color:var(--forest);}
+    .btn-secondary:hover{background-color:#1a2e19;border-color:#1a2e19;box-shadow:var(--shadow-md);}
+    .btn-outline-white{background-color:transparent;color:var(--white);border-color:var(--white);}
+    .btn-outline-white:hover{background-color:var(--white);color:var(--forest);}
+    .btn-sm{padding:var(--space-2) var(--space-4);font-size:var(--text-sm);}
+    .btn-lg{padding:var(--space-4) var(--space-8);font-size:var(--text-lg);border-radius:var(--radius-lg);}
+    .btn-full{width:100%;}
+
+    .container{width:100%;max-width:var(--container-xl);margin-left:auto;margin-right:auto;padding-left:var(--space-4);padding-right:var(--space-4);}
+
+    .nav{position:fixed;top:0;left:0;right:0;height:var(--nav-height-mobile);background-color:var(--white);border-bottom:1px solid var(--border);box-shadow:var(--shadow-sm);z-index:var(--z-sticky);transition:box-shadow var(--transition-base);}
+    .nav.scrolled{box-shadow:var(--shadow-md);}
+    .nav>.container{height:100%;}
+    .nav__inner{height:100%;display:flex;align-items:center;justify-content:space-between;}
+    .nav__brand{display:flex;align-items:center;gap:var(--space-2);text-decoration:none;flex-shrink:0;}
+    .nav__logo-text{font-family:var(--font-heading);font-size:var(--text-xl);font-weight:var(--weight-bold);color:var(--forest);letter-spacing:var(--tracking-tight);line-height:1;}
+    .nav__logo-text span{color:var(--terracotta);}
+    .nav__tagline{font-size:var(--text-xs);color:var(--sage);letter-spacing:var(--tracking-wider);text-transform:uppercase;display:none;}
+    .nav__links{display:none;align-items:center;gap:var(--space-1);}
+    .nav__link{font-size:var(--text-sm);font-weight:var(--weight-medium);color:var(--dark);padding:var(--space-2) var(--space-3);border-radius:var(--radius-md);transition:color var(--transition-fast),background-color var(--transition-fast);text-decoration:none;white-space:nowrap;}
+    .nav__link:hover{color:var(--forest);background-color:var(--cream);}
+    .nav__link.active{color:var(--forest);font-weight:var(--weight-semibold);}
+    .nav__cta{margin-left:var(--space-4);}
+    .nav__hamburger{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:5px;width:40px;height:40px;border-radius:var(--radius-md);padding:var(--space-2);background:none;border:none;cursor:pointer;transition:background-color var(--transition-fast);flex-shrink:0;}
+    .nav__hamburger:hover{background-color:var(--cream);}
+    .nav__hamburger-line{display:block;width:22px;height:2px;background-color:var(--dark);border-radius:var(--radius-full);transform-origin:center;transition:transform var(--transition-base),opacity var(--transition-base);}
+    .nav__hamburger.open .nav__hamburger-line:nth-child(1){transform:translateY(7px) rotate(45deg);}
+    .nav__hamburger.open .nav__hamburger-line:nth-child(2){opacity:0;transform:scaleX(0);}
+    .nav__hamburger.open .nav__hamburger-line:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+    .nav__mobile-menu{position:fixed;top:var(--nav-height-mobile);left:0;right:0;background-color:var(--white);border-bottom:1px solid var(--border);box-shadow:var(--shadow-lg);z-index:199;overflow:hidden;max-height:0;transition:max-height var(--transition-slow) cubic-bezier(0.4,0,0.2,1),opacity var(--transition-base);opacity:0;pointer-events:none;}
+    .nav__mobile-menu.open{max-height:420px;opacity:1;pointer-events:auto;}
+    .nav__mobile-menu-inner{padding:var(--space-4) var(--space-4) var(--space-6);display:flex;flex-direction:column;gap:var(--space-1);}
+    .nav__mobile-link{font-size:var(--text-base);font-weight:var(--weight-medium);color:var(--dark);padding:var(--space-3) var(--space-4);border-radius:var(--radius-md);transition:color var(--transition-fast),background-color var(--transition-fast);text-decoration:none;display:block;}
+    .nav__mobile-link:hover{color:var(--forest);background-color:var(--cream);}
+    .nav__mobile-cta{margin-top:var(--space-4);padding-top:var(--space-4);border-top:1px solid var(--border);}
+    .page-body{padding-top:var(--nav-height-mobile);}
+
+    .hero{position:relative;background-color:var(--forest);min-height:90vh;padding:var(--space-2xl) 0 var(--space-xl);display:flex;flex-direction:column;justify-content:center;overflow:hidden;}
+    .hero::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(45deg,rgba(255,255,255,.03) 0px,rgba(255,255,255,.03) 1px,transparent 1px,transparent 24px);pointer-events:none;z-index:0;}
+    .hero__inner{position:relative;z-index:1;}
+    .hero__grid{display:grid;grid-template-columns:1fr;gap:var(--space-12);align-items:center;}
+    .hero__left{display:flex;flex-direction:column;gap:var(--space-6);}
+    .hero__eyebrow{font-family:var(--font-body);font-size:var(--text-sm);font-weight:var(--weight-semibold);letter-spacing:var(--tracking-wider);text-transform:uppercase;color:#C49070;line-height:var(--leading-normal);}
+    .hero__headline{font-family:var(--font-heading);font-size:var(--text-4xl);font-weight:var(--weight-bold);line-height:var(--leading-tight);letter-spacing:var(--tracking-tight);color:var(--white);}
+    .hero__subheadline{font-size:var(--text-base);line-height:var(--leading-relaxed);color:var(--terracotta-light);max-width:560px;}
+    .hero__proof{display:flex;align-items:center;gap:var(--space-3);font-size:var(--text-sm);font-weight:var(--weight-medium);color:var(--white);}
+    .hero__proof-stars{display:flex;align-items:center;gap:2px;color:var(--sage);flex-shrink:0;}
+    .hero__proof-stars svg{width:16px;height:16px;}
+    .hero__ctas{display:flex;flex-wrap:wrap;gap:var(--space-4);align-items:center;}
+    .hero__right{display:flex;align-items:center;justify-content:center;}
+    .hero__video-card{width:100%;max-width:480px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:16/9;display:block;}
+    .hero__stats{margin-top:var(--space-12);padding-top:var(--space-8);border-top:1px solid rgba(255,255,255,.12);}
+    .hero__stats-row{display:flex;flex-direction:column;align-items:center;gap:var(--space-8);}
+    .hero__stat{text-align:center;display:flex;flex-direction:column;align-items:center;gap:var(--space-1);}
+    .hero__stat-number{font-family:var(--font-heading);font-size:var(--text-4xl);font-weight:var(--weight-bold);color:var(--white);line-height:1;}
+    .hero__stat-caption{font-size:var(--text-sm);color:var(--terracotta-light);line-height:var(--leading-normal);}
+    .hero__stat-divider{display:none;width:1px;height:48px;background:rgba(255,255,255,.15);flex-shrink:0;}
+
+    .social-proof{background-color:var(--white);padding:2rem 0;border-bottom:1px solid var(--border);}
+    .social-proof__stat{text-align:center;font-size:1rem;color:var(--gray);line-height:var(--leading-relaxed);margin-bottom:1.25rem;}
+    .social-proof__stat strong{font-size:1.05rem;font-weight:var(--weight-bold);color:var(--terracotta);}
+    .social-proof__label{text-align:center;font-size:.8rem;font-style:italic;color:var(--gray);margin-bottom:.75rem;}
+    .marquee-outer{width:100%;overflow:hidden;-webkit-mask-image:linear-gradient(to right,transparent 0%,black 8%,black 92%,transparent 100%);mask-image:linear-gradient(to right,transparent 0%,black 8%,black 92%,transparent 100%);}
+    .marquee-track{display:flex;width:max-content;gap:2.5rem;align-items:center;animation:marquee-scroll 28s linear infinite;will-change:transform;}
+    .marquee-outer:hover .marquee-track{animation-play-state:paused;}
+    @keyframes marquee-scroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+    .marquee-item{font-size:.9rem;font-weight:var(--weight-medium);color:var(--dark);white-space:nowrap;flex-shrink:0;}
+    .marquee-dot{color:var(--border);flex-shrink:0;font-size:1rem;line-height:1;}
+
+    .why-tyse{background-color:var(--cream);padding:var(--space-16) 0;}
+    .why-tyse__header{text-align:center;max-width:680px;margin:0 auto var(--space-12);}
+    .why-tyse__eyebrow{font-family:var(--font-body);font-size:var(--text-xs);font-weight:var(--weight-semibold);letter-spacing:var(--tracking-widest);text-transform:uppercase;color:var(--terracotta);margin-bottom:var(--space-3);}
+    .why-tyse__headline{font-family:var(--font-heading);font-size:var(--text-4xl);font-weight:var(--weight-bold);line-height:var(--leading-tight);letter-spacing:var(--tracking-tight);color:var(--forest);margin-bottom:var(--space-4);}
+    .why-tyse__sub{font-size:var(--text-lg);line-height:var(--leading-relaxed);color:var(--gray);}
+    .why-tyse__grid{display:grid;grid-template-columns:1fr;gap:var(--space-6);}
+    .why-card{background-color:var(--white);border:1px solid var(--border);border-top:3px solid var(--terracotta);border-radius:var(--radius-lg);padding:var(--space-8);box-shadow:var(--shadow-sm);display:flex;flex-direction:column;gap:var(--space-4);transition:transform var(--transition-base),box-shadow var(--transition-base);}
+    .why-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);}
+    .why-card__icon{width:52px;height:52px;border-radius:var(--radius-full);background-color:var(--sage-light);display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0;border:1px solid var(--border);}
+    .why-card__title{font-family:var(--font-heading);font-size:var(--text-xl);font-weight:var(--weight-semibold);color:var(--forest);line-height:var(--leading-snug);}
+    .why-card__body{font-size:var(--text-sm);line-height:var(--leading-relaxed);color:var(--gray);flex:1;}
+    .why-card__cta{font-size:var(--text-sm);font-weight:var(--weight-semibold);color:var(--terracotta);text-decoration:none;letter-spacing:var(--tracking-wide);transition:color var(--transition-fast),letter-spacing var(--transition-fast);display:inline-block;margin-top:auto;}
+    .why-card__cta:hover{color:#8f5038;letter-spacing:var(--tracking-wider);}
+
+    .services{background-color:var(--white);padding:var(--space-16) 0;}
+    .services__header{text-align:center;max-width:640px;margin:0 auto var(--space-12);}
+    .services__eyebrow{font-family:var(--font-body);font-size:var(--text-xs);font-weight:var(--weight-semibold);letter-spacing:var(--tracking-widest);text-transform:uppercase;color:var(--terracotta);margin-bottom:var(--space-3);}
+    .services__headline{font-family:var(--font-heading);font-size:var(--text-4xl);font-weight:var(--weight-bold);line-height:var(--leading-tight);letter-spacing:var(--tracking-tight);color:var(--forest);margin-bottom:var(--space-4);}
+    .services__sub{font-size:var(--text-lg);line-height:var(--leading-relaxed);color:var(--gray);}
+    .services__featured{background-color:var(--forest);border-radius:var(--radius-xl);padding:var(--space-10);display:grid;grid-template-columns:1fr;gap:var(--space-8);margin-bottom:1.5rem;box-shadow:var(--shadow-xl);}
+    .featured__badge{display:inline-flex;align-items:center;gap:var(--space-2);background-color:var(--terracotta);color:var(--white);font-size:var(--text-xs);font-weight:var(--weight-bold);letter-spacing:var(--tracking-widest);text-transform:uppercase;padding:var(--space-1) var(--space-3);border-radius:var(--radius-full);margin-bottom:var(--space-4);}
+    .featured__title{font-family:var(--font-heading);font-size:var(--text-4xl);font-weight:var(--weight-bold);color:var(--white);line-height:var(--leading-tight);letter-spacing:var(--tracking-tight);margin-bottom:var(--space-2);}
+    .featured__subtitle{font-style:italic;font-size:var(--text-base);color:var(--terracotta-light);margin-bottom:var(--space-5);}
+    .featured__body{font-size:var(--text-base);line-height:var(--leading-relaxed);color:var(--terracotta-light);margin-bottom:var(--space-5);}
+    .featured__list{display:flex;flex-direction:column;gap:var(--space-2);margin-bottom:var(--space-8);}
+    .featured__list-item{display:flex;align-items:flex-start;gap:var(--space-3);font-size:var(--text-sm);color:var(--terracotta-light);line-height:var(--leading-relaxed);}
+    .featured__list-item::before{content:'';width:6px;height:6px;border-radius:var(--radius-full);background-color:var(--terracotta);flex-shrink:0;margin-top:.45em;}
+    .featured__stats-box{background-color:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.13);border-radius:var(--radius-lg);padding:var(--space-8);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:var(--space-4);}
+    .featured__stat-number{font-family:var(--font-heading);font-size:var(--text-6xl);font-weight:var(--weight-bold);color:var(--white);line-height:1;}
+    .featured__stat-label{font-size:var(--text-base);color:var(--terracotta-light);line-height:var(--leading-relaxed);max-width:220px;}
+    .featured__stat-divider{width:40px;height:1px;background-color:rgba(255,255,255,.2);}
+    .featured__stat-note{font-size:var(--text-sm);color:var(--sage);line-height:var(--leading-relaxed);max-width:200px;}
+    .services__cards{display:grid;grid-template-columns:1fr;gap:var(--space-6);}
+    .svc-card{background-color:var(--white);border:1px solid var(--border);border-top:3px solid var(--sage);border-radius:var(--radius-lg);padding:var(--space-8);box-shadow:var(--shadow-sm);display:flex;flex-direction:column;gap:var(--space-4);transition:transform var(--transition-base),box-shadow var(--transition-base);}
+    .svc-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg);}
+    .svc-card__eyebrow{font-size:var(--text-xs);font-weight:var(--weight-semibold);letter-spacing:var(--tracking-widest);text-transform:uppercase;color:var(--sage);}
+    .svc-card__title{font-family:var(--font-heading);font-size:var(--text-2xl);font-weight:var(--weight-bold);color:var(--forest);line-height:var(--leading-snug);}
+    .svc-card__body{font-size:var(--text-sm);line-height:var(--leading-relaxed);color:var(--gray);flex:1;}
+
+    .our-approach{background-color:var(--forest);padding:var(--space-16) 0;}
+    .our-approach__grid{display:grid;grid-template-columns:1fr;gap:var(--space-12);align-items:start;}
+    .our-approach__eyebrow{font-family:var(--font-body);font-size:var(--text-xs);font-weight:var(--weight-semibold);letter-spacing:var(--tracking-widest);text-transform:uppercase;color:var(--terracotta);margin-bottom:var(--space-3);}
+    .our-approach__headline{font-family:var(--font-heading);font-size:var(--text-4xl);font-weight:var(--weight-bold);line-height:var(--leading-tight);letter-spacing:var(--tracking-tight);color:var(--white);margin-bottom:var(--space-6);}
+    .our-approach__body{font-size:var(--text-base);line-height:var(--leading-relaxed);color:var(--terracotta-light);margin-bottom:var(--space-4);}
+    .our-approach__pills{display:flex;flex-wrap:wrap;gap:var(--space-3);margin-bottom:var(--space-8);}
+    .approach-pill{display:inline-flex;align-items:center;gap:var(--space-2);background-color:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);border-radius:var(--radius-full);padding:var(--space-2) var(--space-4);font-size:var(--text-xs);font-weight:var(--weight-semibold);letter-spacing:var(--tracking-wide);color:var(--terracotta-light);}
+    .approach-pill__dot{width:6px;height:6px;border-radius:var(--radius-full);background-color:var(--terracotta);flex-shrink:0;}
+    .our-approach__video-card{background-color:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius-xl);overflow:hidden;}
+    .video-card__media{position:relative;width:100%;aspect-ratio:16/9;background-color:rgba(0,0,0,.3);display:flex;align-items:center;justify-content:center;}
+    .video-card__play{width:60px;height:60px;border-radius:var(--radius-full);background-color:var(--terracotta);display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 12px rgba(173,107,75,.2);transition:transform var(--transition-base),box-shadow var(--transition-base);cursor:pointer;}
+    .video-card__play:hover{transform:scale(1.08);box-shadow:0 0 0 16px rgba(173,107,75,.25);}
+    .video-card__play-icon{width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent var(--white);margin-left:4px;}
+    .video-card__content{padding:var(--space-6);}
+    .video-card__label{font-family:var(--font-heading);font-size:var(--text-lg);font-weight:var(--weight-semibold);color:var(--white);margin-bottom:var(--space-2);}
+    .video-card__desc{font-size:var(--text-sm);line-height:var(--leading-relaxed);color:var(--terracotta-light);margin-bottom:var(--space-3);}
+    .video-card__placeholder{font-size:var(--text-xs);font-style:italic;color:var(--sage);}
+
+    .how-it-works{background-color:var(--cream);padding:var(--space-16) 0;}
+    .how-it-works__header{text-align:center;max-width:600px;margin:0 auto var(--space-8);}
+    .how-it-works__eyebrow{font-family:var(--font-body);font-size:var(--text-xs);font-weight:var(--weight-semibold);letter-spacing:var(--tracking-widest);text-transform:uppercase;color:var(--terracotta);margin-bottom:var(--space-3);}
+    .how-it-works__headline{font-family:var(--font-heading);font-size:var(--text-4xl);font-weight:var(--weight-bold);line-height:var(--leading-tight);letter-spacing:var(--tracking-tight);color:var(--forest);}
+    .how-it-works__steps{display:grid;grid-template-columns:1fr;gap:var(--space-4);position:relative;margin-bottom:var(--space-8);}
+    .how-it-works__steps::before{content:'';display:none;position:absolute;top:27px;left:calc(16.666% + 27px);right:calc(16.666% + 27px);height:0;border-top:2px dashed var(--border);z-index:0;}
+    .step-card{background-color:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);padding:var(--space-6);text-align:center;box-shadow:var(--shadow-sm);display:flex;flex-direction:column;align-items:center;gap:var(--space-3);position:relative;z-index:1;}
+    .step-card__badge{width:54px;height:54px;border-radius:var(--radius-full);background-color:var(--terracotta);color:var(--white);font-family:var(--font-heading);font-size:var(--text-xl);font-weight:var(--weight-bold);display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 0 0 5px var(--cream);}
+    .step-card__title{font-family:var(--font-heading);font-size:var(--text-xl);font-weight:var(--weight-semibold);color:var(--forest);line-height:var(--leading-snug);}
+    .step-card__body{font-size:var(--text-sm);line-height:var(--leading-relaxed);color:var(--gray);}
+    .how-it-works__cta{display:flex;flex-direction:column;align-items:center;gap:var(--space-4);text-align:center;}
+    .how-it-works__cta-note{font-size:var(--text-sm);color:var(--gray);letter-spacing:var(--tracking-wide);}
+
+    .testimonials{background-color:var(--cream);padding:var(--space-16) 0;}
+    .testimonials__header{text-align:center;max-width:660px;margin:0 auto var(--space-10);}
+    .testimonials__eyebrow{font-family:var(--font-body);font-size:var(--text-xs);font-weight:var(--weight-semibold);letter-spacing:var(--tracking-widest);text-transform:uppercase;color:var(--terracotta);margin-bottom:var(--space-3);}
+    .testimonials__headline{font-family:var(--font-heading);font-size:var(--text-4xl);font-weight:var(--weight-bold);line-height:var(--leading-tight);letter-spacing:var(--tracking-tight);color:var(--forest);}
+    .testimonials__stats-bar{background-color:var(--forest);border-radius:var(--radius-xl);padding:var(--space-8) var(--space-6);display:grid;grid-template-columns:1fr 1fr;gap:var(--space-6) 0;margin-bottom:var(--space-10);}
+    .stat-item{text-align:center;padding:0 var(--space-5);position:relative;}
+    .stat-item:nth-child(1),.stat-item:nth-child(2){border-bottom:1px solid rgba(255,255,255,.1);padding-bottom:var(--space-6);}
+    .stat-item:nth-child(3),.stat-item:nth-child(4){padding-top:var(--space-6);}
+    .stat-item:nth-child(odd){border-right:1px solid rgba(255,255,255,.1);}
+    .stat-item__number{font-family:var(--font-heading);font-size:var(--text-5xl);font-weight:var(--weight-bold);color:var(--white);line-height:1;margin-bottom:var(--space-2);}
+    .stat-item__label{font-size:var(--text-xs);line-height:var(--leading-relaxed);color:var(--terracotta-light);max-width:160px;margin:0 auto;}
+    .testimonials__grid{display:grid;grid-template-columns:1fr;gap:var(--space-5);margin-bottom:var(--space-8);padding:0 var(--space-2);}
+    .testi-card{background-color:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);padding:var(--space-8);box-shadow:var(--shadow-sm);display:flex;flex-direction:column;align-items:flex-start;gap:var(--space-4);height:100%;}
+    .testi-card__stars{display:flex;gap:3px;color:var(--sage);font-size:1rem;line-height:1;}
+    .testi-card__quote-mark{font-family:var(--font-heading);font-size:4rem;line-height:.6;color:var(--terracotta);font-weight:var(--weight-bold);user-select:none;}
+    .testi-card__text{font-style:italic;font-size:var(--text-base);line-height:var(--leading-relaxed);color:var(--dark);flex:1;}
+    .testi-card__attribution{display:flex;align-items:center;gap:var(--space-3);padding-top:var(--space-3);border-top:1px solid var(--border);}
+    .testi-card__avatar{width:42px;height:42px;border-radius:var(--radius-full);background-color:var(--terracotta-light);color:var(--forest);font-family:var(--font-heading);font-size:var(--text-sm);font-weight:var(--weight-bold);display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1px solid var(--border);}
+    .testi-card__name{font-size:var(--text-sm);font-weight:var(--weight-semibold);color:var(--forest);line-height:var(--leading-snug);}
+    .testi-card__role{font-size:var(--text-xs);color:var(--gray);}
+    .testimonials__notice{background-color:rgba(130,137,110,.1);border:1px solid rgba(130,137,110,.25);border-radius:var(--radius-lg);padding:var(--space-4) var(--space-6);text-align:center;}
+    .testimonials__notice p{font-size:var(--text-sm);color:var(--sage);line-height:var(--leading-relaxed);}
+    .testimonials__notice strong{color:var(--forest);}
+
+    .packages{background-color:var(--cream);padding:var(--space-16) 0;}
+    .packages__header{text-align:center;max-width:640px;margin:0 auto var(--space-10);}
+    .packages__eyebrow{font-family:var(--font-body);font-size:var(--text-xs);font-weight:var(--weight-semibold);letter-spacing:var(--tracking-widest);text-transform:uppercase;color:var(--terracotta);margin-bottom:var(--space-3);}
+    .packages__headline{font-family:var(--font-heading);font-size:var(--text-4xl);font-weight:var(--weight-bold);line-height:var(--leading-tight);letter-spacing:var(--tracking-tight);color:var(--forest);margin-bottom:var(--space-3);}
+    .packages__sub{font-size:var(--text-base);line-height:var(--leading-relaxed);color:var(--gray);}
+    .packages__grid{display:grid;grid-template-columns:1fr;gap:var(--space-5);padding-top:1.75rem;align-items:start;margin-bottom:var(--space-6);}
+    .pricing-card{background-color:var(--white);border:1px solid var(--border);border-radius:var(--radius-xl);padding:var(--space-8);box-shadow:var(--shadow-sm);display:flex;flex-direction:column;gap:var(--space-5);position:relative;}
+    .pricing-card__eyebrow{font-size:var(--text-xs);font-weight:var(--weight-semibold);letter-spacing:var(--tracking-widest);text-transform:uppercase;color:var(--sage);}
+    .pricing-card__title{font-family:var(--font-heading);font-size:var(--text-2xl);font-weight:var(--weight-bold);color:var(--forest);line-height:var(--leading-snug);margin-bottom:var(--space-1);}
+    .pricing-card__tagline{font-style:italic;font-size:var(--text-sm);color:var(--gray);line-height:var(--leading-relaxed);}
+    .pricing-card__price{font-family:var(--font-heading);font-size:var(--text-4xl);font-weight:var(--weight-bold);color:var(--forest);line-height:1;}
+    .pricing-card__price-note{font-size:var(--text-xs);color:var(--gray);margin-top:var(--space-1);}
+    .pricing-card__divider{height:1px;background-color:var(--border);}
+    .pricing-card__features{display:flex;flex-direction:column;gap:var(--space-3);flex:1;}
+    .pricing-feature{display:flex;align-items:flex-start;gap:var(--space-3);font-size:var(--text-sm);line-height:var(--leading-relaxed);color:var(--gray);}
+    .pricing-feature__check{color:var(--terracotta);font-size:1rem;line-height:1.4;flex-shrink:0;}
+    .pricing-card--featured{background-color:var(--forest);border:2px solid var(--terracotta);box-shadow:var(--shadow-xl);}
+    .pricing-card--featured .pricing-card__eyebrow{color:var(--sage);}
+    .pricing-card--featured .pricing-card__title{color:var(--white);}
+    .pricing-card--featured .pricing-card__tagline{color:var(--terracotta-light);}
+    .pricing-card--featured .pricing-card__price{color:var(--white);}
+    .pricing-card--featured .pricing-card__price-note{color:var(--terracotta-light);}
+    .pricing-card--featured .pricing-card__divider{background-color:rgba(255,255,255,.12);}
+    .pricing-card--featured .pricing-feature{color:var(--terracotta-light);}
+    .pricing-card--featured .pricing-feature__check{color:var(--terracotta);}
+    .pricing-card__badge{position:absolute;top:-1rem;left:50%;transform:translateX(-50%);background-color:var(--terracotta);color:var(--white);font-size:var(--text-xs);font-weight:var(--weight-bold);letter-spacing:var(--tracking-widest);text-transform:uppercase;padding:var(--space-1) var(--space-4);border-radius:var(--radius-full);white-space:nowrap;}
+    .packages__disclaimer{text-align:center;font-size:var(--text-xs);color:var(--gray);line-height:var(--leading-relaxed);}
+
+    .faq{background-color:var(--white);padding:var(--space-16) 0;}
+    .faq__header{text-align:center;max-width:620px;margin:0 auto var(--space-10);}
+    .faq__eyebrow{font-family:var(--font-body);font-size:var(--text-xs);font-weight:var(--weight-semibold);letter-spacing:var(--tracking-widest);text-transform:uppercase;color:var(--terracotta);margin-bottom:var(--space-3);}
+    .faq__headline{font-family:var(--font-heading);font-size:var(--text-4xl);font-weight:var(--weight-bold);line-height:var(--leading-tight);letter-spacing:var(--tracking-tight);color:var(--forest);}
+    .faq__list{max-width:760px;margin:0 auto;border-top:1px solid var(--border);}
+    .faq__item{border-bottom:1px solid var(--border);}
+    .faq__question{width:100%;background:none;border:none;padding:var(--space-5) 0;display:flex;align-items:center;justify-content:space-between;gap:var(--space-4);cursor:pointer;text-align:left;}
+    .faq__question-text{font-family:var(--font-heading);font-size:var(--text-lg);font-weight:var(--weight-semibold);color:var(--forest);line-height:var(--leading-snug);transition:color var(--transition-fast);}
+    .faq__icon{width:28px;height:28px;border-radius:var(--radius-full);background-color:var(--sage-light);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--terracotta);font-size:1.1rem;font-weight:var(--weight-bold);line-height:1;transition:background-color var(--transition-fast),transform var(--transition-base);}
+    .faq__answer{max-height:0;overflow:hidden;transition:max-height .35s ease,padding .2s ease;}
+    .faq__answer-inner{padding-bottom:var(--space-5);font-size:var(--text-base);line-height:var(--leading-relaxed);color:var(--gray);}
+    .faq__item--open .faq__question-text{color:var(--terracotta);}
+    .faq__item--open .faq__icon{background-color:var(--terracotta);color:var(--white);border-color:var(--terracotta);transform:rotate(45deg);}
+    .faq__item--open .faq__answer{max-height:600px;}
+    .faq__answer-placeholder{display:inline-block;background-color:rgba(221,203,183,.35);border:1px solid var(--terracotta-light);border-radius:var(--radius-md);padding:var(--space-3) var(--space-4);color:var(--terracotta);font-size:var(--text-sm);font-weight:var(--weight-semibold);line-height:var(--leading-relaxed);margin-top:var(--space-1);}
+
+    .cta-banner{background-color:var(--terracotta);padding:var(--space-16) 0;}
+    .cta-banner__inner{display:flex;flex-direction:column;align-items:center;text-align:center;gap:var(--space-6);}
+    .cta-banner__headline{font-family:var(--font-heading);font-size:var(--text-4xl);font-weight:var(--weight-bold);line-height:var(--leading-tight);letter-spacing:var(--tracking-tight);color:var(--white);max-width:720px;}
+    .cta-banner__sub{font-size:var(--text-lg);line-height:var(--leading-relaxed);color:rgba(255,255,255,.85);max-width:600px;}
+    .cta-banner__proof{font-size:var(--text-sm);font-weight:var(--weight-semibold);letter-spacing:var(--tracking-wide);color:rgba(255,255,255,.75);}
+    .cta-banner__buttons{display:flex;flex-wrap:wrap;gap:var(--space-4);justify-content:center;}
+    .btn-white{display:inline-flex;align-items:center;justify-content:center;gap:var(--space-2);background-color:var(--white);color:var(--terracotta);border:2px solid var(--white);border-radius:var(--radius-md);padding:var(--space-3) var(--space-8);font-family:var(--font-body);font-size:var(--text-sm);font-weight:var(--weight-bold);letter-spacing:var(--tracking-wide);text-decoration:none;transition:background-color var(--transition-fast),color var(--transition-fast),transform var(--transition-fast);}
+    .btn-white:hover{background-color:transparent;color:var(--white);transform:translateY(-1px);}
+    .btn-white-outline{display:inline-flex;align-items:center;justify-content:center;background-color:transparent;color:var(--white);border:2px solid rgba(255,255,255,.65);border-radius:var(--radius-md);padding:var(--space-3) var(--space-8);font-family:var(--font-body);font-size:var(--text-sm);font-weight:var(--weight-bold);letter-spacing:var(--tracking-wide);text-decoration:none;transition:border-color var(--transition-fast),background-color var(--transition-fast),transform var(--transition-fast);}
+    .btn-white-outline:hover{border-color:var(--white);background-color:rgba(255,255,255,.1);transform:translateY(-1px);}
+    .cta-banner__location{font-size:var(--text-sm);color:rgba(255,255,255,.65);line-height:var(--leading-relaxed);}
+
+    .footer{background-color:var(--forest);color:var(--terracotta-light);}
+    .footer__main{padding:var(--space-16) 0 var(--space-12);}
+    .footer__grid{display:grid;grid-template-columns:1fr;gap:var(--space-10);}
+    .footer__brand-logo{font-family:var(--font-heading);font-size:var(--text-2xl);font-weight:var(--weight-bold);color:var(--white);margin-bottom:var(--space-3);}
+    .footer__brand-logo span{color:var(--terracotta);}
+    .footer__brand-desc{font-size:var(--text-sm);line-height:var(--leading-relaxed);color:var(--terracotta-light);max-width:280px;}
+    .footer__brand-location{display:flex;align-items:center;gap:var(--space-2);margin-top:var(--space-4);font-size:var(--text-sm);color:var(--terracotta-light);}
+    .footer__brand-location svg{flex-shrink:0;color:var(--terracotta);}
+    .footer__col-heading{font-family:var(--font-body);font-size:var(--text-xs);font-weight:var(--weight-semibold);letter-spacing:var(--tracking-widest);text-transform:uppercase;color:var(--white);margin-bottom:var(--space-4);}
+    .footer__links{display:flex;flex-direction:column;gap:var(--space-2);}
+    .footer__link{font-size:var(--text-sm);color:var(--terracotta-light);text-decoration:none;transition:color var(--transition-fast);}
+    .footer__link:hover{color:var(--white);}
+    .footer__contact-items{display:flex;flex-direction:column;gap:var(--space-3);}
+    .footer__contact-item{display:flex;align-items:flex-start;gap:var(--space-3);font-size:var(--text-sm);color:var(--terracotta-light);}
+    .footer__contact-item svg{flex-shrink:0;margin-top:2px;color:var(--terracotta);}
+    .footer__contact-link{color:var(--terracotta-light);text-decoration:none;transition:color var(--transition-fast);}
+    .footer__contact-link:hover{color:var(--white);}
+    .footer__bottom{border-top:1px solid rgba(255,255,255,.08);padding:var(--space-6) 0;}
+    .footer__bottom-inner{display:flex;flex-direction:column;align-items:center;gap:var(--space-3);text-align:center;}
+    .footer__copyright{font-size:var(--text-xs);color:var(--sage);}
+    .footer__legal-links{display:flex;align-items:center;gap:var(--space-4);}
+    .footer__legal-link{font-size:var(--text-xs);color:var(--sage);text-decoration:none;transition:color var(--transition-fast);}
+    .footer__legal-link:hover{color:var(--terracotta-light);}
+
+    [data-animate]{opacity:0;transform:translateY(20px);transition:opacity .5s ease,transform .5s ease;}
+    [data-animate].visible{opacity:1;transform:translateY(0);}
+    [data-animate][data-delay="1"]{transition-delay:.1s;}
+    [data-animate][data-delay="2"]{transition-delay:.2s;}
+    [data-animate][data-delay="3"]{transition-delay:.3s;}
+    [data-animate][data-delay="4"]{transition-delay:.4s;}
+
+    .blur-focus{opacity:0;filter:blur(8px);transform:translateY(12px);will-change:opacity,filter,transform;}
+    .blur-focus.revealed{opacity:1;filter:blur(0px);transform:translateY(0);transition:opacity .65s cubic-bezier(.25,.46,.45,.94) var(--bf-delay,0s),filter .65s cubic-bezier(.25,.46,.45,.94) var(--bf-delay,0s),transform .65s cubic-bezier(.25,.46,.45,.94) var(--bf-delay,0s);}
+    .bf-delay-1{--bf-delay:.10s;}.bf-delay-2{--bf-delay:.25s;}.bf-delay-3{--bf-delay:.45s;}.bf-delay-4{--bf-delay:.65s;}.bf-delay-5{--bf-delay:.85s;}.bf-delay-6{--bf-delay:1.10s;}
+
+    @media (max-width:767px){
+      .btn,.btn-white,.btn-white-outline{min-height:48px;padding-top:var(--space-3);padding-bottom:var(--space-3);}
+      .hero__headline{font-size:clamp(2rem,6vw,var(--text-5xl));}
+      .footer__grid{grid-template-columns:1fr;gap:var(--space-8);}
+    }
+    @media (min-width:768px){
+      .container{padding-left:var(--space-6);padding-right:var(--space-6);}
+      .page-body{padding-top:var(--nav-height);}
+      .nav{height:var(--nav-height);}
+      .nav__mobile-menu{top:var(--nav-height);}
+      .nav__tagline{display:block;}
+      .hero__headline{font-size:var(--text-5xl);}
+      .why-tyse__grid{grid-template-columns:1fr 1fr;}
+      .services__cards{grid-template-columns:1fr 1fr;}
+      .testimonials__grid{grid-template-columns:repeat(3,1fr);}
+      .hero__stats-row{flex-direction:row;justify-content:center;gap:var(--space-12);}
+      .hero__stat-divider{display:block;}
+      .footer__grid{grid-template-columns:1fr 1fr;gap:var(--space-10);}
+      .footer__bottom-inner{flex-direction:row;justify-content:space-between;text-align:left;}
+    }
+    @media (min-width:1200px){
+      .container{padding-left:var(--space-8);padding-right:var(--space-8);}
+      .nav__links{display:flex;}
+      .nav__hamburger{display:none;}
+      .nav__mobile-menu{display:none!important;}
+      .hero__grid{grid-template-columns:1fr 1fr;gap:var(--space-16);}
+      .hero__headline{font-size:var(--text-6xl);}
+      .why-tyse__grid{grid-template-columns:repeat(4,1fr);}
+      .services__featured{grid-template-columns:1fr .55fr;align-items:start;}
+      .our-approach__grid{grid-template-columns:1fr .75fr;align-items:center;}
+      .our-approach__headline{font-size:var(--text-5xl);}
+      .how-it-works__steps{grid-template-columns:repeat(3,1fr);}
+      .how-it-works__steps::before{display:block;}
+      .testimonials__stats-bar{grid-template-columns:repeat(4,1fr);gap:0;}
+      .stat-item:nth-child(1),.stat-item:nth-child(2){border-bottom:none;padding-bottom:0;}
+      .stat-item:nth-child(3),.stat-item:nth-child(4){padding-top:0;}
+      .stat-item:nth-child(odd){border-right:none;}
+      .stat-item:not(:last-child){border-right:1px solid rgba(255,255,255,.12);}
+      .packages__grid{grid-template-columns:repeat(3,1fr);}
+      .footer__grid{grid-template-columns:1.5fr 1fr 1fr;gap:var(--space-12);}
+    }
+    @media (prefers-reduced-motion:reduce){
+      [data-animate]{opacity:1;transform:none;transition:none;}
+      .blur-focus,.blur-focus.revealed{opacity:1!important;filter:none!important;transform:none!important;transition:none!important;}
+    }
+  </style>
+</head>
+<body>
+
+  <header class="nav" id="main-nav" role="banner">
+    <div class="container">
+      <nav class="nav__inner" aria-label="Main navigation">
+        <a href="#" class="nav__brand" aria-label="Tyse Tutoring — home">
+          <div>
+            <div class="nav__logo-text">Tyse<span>.</span>Tutoring</div>
+            <div class="nav__tagline">Boulder, CO</div>
+          </div>
+        </a>
+        <ul class="nav__links" role="list">
+          <li><a href="#why-tyse" class="nav__link" data-nav-link>About</a></li>
+          <li><a href="#subjects" class="nav__link" data-nav-link>Subjects</a></li>
+          <li><a href="#how-it-works" class="nav__link" data-nav-link>How It Works</a></li>
+          <li><a href="#packages" class="nav__link" data-nav-link>Pricing</a></li>
+          <li><a href="#reviews" class="nav__link" data-nav-link>Reviews</a></li>
+          <li><a href="#faq" class="nav__link" data-nav-link>FAQ</a></li>
+          <li><a href="#book-now" class="btn btn-primary btn-sm nav__cta" data-nav-link>Get Started</a></li>
+        </ul>
+        <button class="nav__hamburger" id="hamburger-btn" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="nav__hamburger-line"></span>
+          <span class="nav__hamburger-line"></span>
+          <span class="nav__hamburger-line"></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <div class="nav__mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile navigation">
+    <div class="nav__mobile-menu-inner">
+      <a href="#why-tyse" class="nav__mobile-link" data-mobile-link>About</a>
+      <a href="#subjects" class="nav__mobile-link" data-mobile-link>Subjects</a>
+      <a href="#how-it-works" class="nav__mobile-link" data-mobile-link>How It Works</a>
+      <a href="#packages" class="nav__mobile-link" data-mobile-link>Pricing</a>
+      <a href="#reviews" class="nav__mobile-link" data-mobile-link>Reviews</a>
+      <a href="#faq" class="nav__mobile-link" data-mobile-link>FAQ</a>
+      <div class="nav__mobile-cta">
+        <a href="#book-now" class="btn btn-primary btn-full" data-mobile-link>Get Started</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="page-body" id="main-content">
+
+    <section class="hero" id="hero">
+      <div class="container hero__inner">
+        <div class="hero__grid">
+          <div class="hero__left">
+            <p class="hero__eyebrow blur-focus bf-delay-1">Expert Tutoring for Every Kind of Learner &mdash; Boulder, CO</p>
+            <h1 class="hero__headline blur-focus bf-delay-2">A Tutor Who Gets How Your Student Actually Thinks</h1>
+            <p class="hero__subheadline blur-focus bf-delay-3">Tyse Tutoring in Boulder, CO specializes in 1-on-1 sessions for middle school, high school, and college students &mdash; with proven results across dyslexia, dyscalculia, SAT/ACT prep, and math and science. Our students have been placed at 30+ of the top 50 universities in the US.</p>
+            <div class="hero__proof blur-focus bf-delay-4">
+              <div class="hero__proof-stars" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              </div>
+              <span>Students placed at 30+ of the top 50 US universities</span>
+            </div>
+            <div class="hero__ctas blur-focus bf-delay-5">
+              <a href="#book-now" class="btn btn-primary btn-lg">Book Your Free Consultation</a>
+              <a href="#packages" class="btn btn-outline-white btn-lg">See Our Packages</a>
+            </div>
+          </div>
+          <div class="hero__right">
+            <div class="hero__video-card blur-focus bf-delay-3" style="padding:0;overflow:hidden;">
+              <iframe width="100%" height="100%" src="https://www.youtube.com/embed/JLAwhgteEvU?autoplay=1&mute=1&rel=0&loop=1&playlist=JLAwhgteEvU" title="Meet Your Tutor — Tyse Tutoring" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="display:block;width:100%;height:100%;border-radius:inherit;"></iframe>
+            </div>
+          </div>
+        </div>
+        <div class="hero__stats blur-focus bf-delay-6">
+          <div class="hero__stats-row">
+            <div class="hero__stat"><span class="hero__stat-number">30+</span><span class="hero__stat-caption">of Top 50 US Universities</span></div>
+            <div class="hero__stat-divider" aria-hidden="true"></div>
+            <div class="hero__stat"><span class="hero__stat-number">1-on-1</span><span class="hero__stat-caption">Personalized Sessions Only</span></div>
+            <div class="hero__stat-divider" aria-hidden="true"></div>
+            <div class="hero__stat"><span class="hero__stat-number">3 Levels</span><span class="hero__stat-caption">Middle &middot; High School &middot; College</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="social-proof" id="social-proof" aria-label="Student placement highlights">
+      <p class="social-proof__stat">Our students have been placed at <strong>30+ of the Top 50 Universities</strong> in the United States.</p>
+      <p class="social-proof__label">Including:</p>
+      <div class="marquee-outer" aria-hidden="true">
+        <div class="marquee-track">
+          <span class="marquee-item">Princeton</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">MIT</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">Harvard</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">Stanford</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">Yale</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">Duke</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">Penn</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">Northwestern</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">Cornell</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">Brown</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">Vanderbilt</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">UC Berkeley</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">Georgetown</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">UCLA</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">University of Michigan</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">Notre Dame</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">Dartmouth</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">Columbia</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">Princeton</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">MIT</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">Harvard</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">Stanford</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">Yale</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">Duke</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">Penn</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">Northwestern</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">Cornell</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">Brown</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">Vanderbilt</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">UC Berkeley</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">Georgetown</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">UCLA</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">University of Michigan</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">Notre Dame</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">Dartmouth</span><span class="marquee-dot">&middot;</span>
+          <span class="marquee-item">Columbia</span><span class="marquee-dot">&middot;</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="why-tyse" id="why-tyse">
+      <div class="container">
+        <div class="why-tyse__header">
+          <p class="why-tyse__eyebrow">Why Families Choose Tyse Tutoring</p>
+          <h2 class="why-tyse__headline">Tutoring Built Around How Your Student Learns</h2>
+          <p class="why-tyse__sub">Every student learns differently. Tyse Tutoring meets yours exactly where they are &mdash; and builds them up from there.</p>
+        </div>
+        <div class="why-tyse__grid">
+          <article class="why-card">
+            <div class="why-card__icon" aria-hidden="true">📖</div>
+            <h3 class="why-card__title">Barton System Trained</h3>
+            <p class="why-card__body">Tyse is directly trained in the Barton Reading and Spelling System — one of the most respected structured literacy programs for students with dyslexia. Sessions follow a proven, multisensory sequence that builds real phonological skills from the ground up.</p>
+            <a href="#packages" class="why-card__cta">Learn about our approach →</a>
+          </article>
+          <article class="why-card">
+            <div class="why-card__icon" aria-hidden="true">🧠</div>
+            <h3 class="why-card__title">Learning Differences Specialist</h3>
+            <p class="why-card__body">Students with dyslexia, dyscalculia, or other learning differences need more than re-teaching — they need a different approach entirely. Tyse adjusts techniques, pacing, and presentation so the material actually clicks, not just gets covered.</p>
+            <a href="#packages" class="why-card__cta">See how we help →</a>
+          </article>
+          <article class="why-card">
+            <div class="why-card__icon" aria-hidden="true">📝</div>
+            <h3 class="why-card__title">SAT, ACT &amp; Test Prep</h3>
+            <p class="why-card__body">Strategic standardized test prep that goes beyond content review. Students learn to manage time, decode question types, and apply targeted strategies — resulting in meaningful score gains with a plan that fits their timeline and goals.</p>
+            <a href="#packages" class="why-card__cta">Explore test prep →</a>
+          </article>
+          <article class="why-card">
+            <div class="why-card__icon" aria-hidden="true">📐</div>
+            <h3 class="why-card__title">Math &amp; Science Depth</h3>
+            <p class="why-card__body">Real conceptual understanding, not just procedure memorization. From pre-algebra through college-level calculus, physics, and chemistry — Tyse helps students see the reasoning behind the math so they can solve problems they haven't seen before.</p>
+            <a href="#packages" class="why-card__cta">Book a session →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="subjects">
+      <div class="container">
+        <div class="services__header">
+          <p class="services__eyebrow">What We Offer</p>
+          <h2 class="services__headline">Specialized Support, Built for Real Students</h2>
+          <p class="services__sub">Whether your student needs test prep, structured literacy help, or a stronger foundation in math and science — there&rsquo;s a path here for them.</p>
+        </div>
+        <div class="services__featured">
+          <div class="featured__left">
+            <div><span class="featured__badge">&#9733; Most Popular</span></div>
+            <h3 class="featured__title">SAT, ACT &amp; Test Prep</h3>
+            <p class="featured__subtitle">The most competitive college admissions cycle in a generation — we&rsquo;ll get your student ready for it.</p>
+            <p class="featured__body">Tyse builds fully customized prep plans around each student&rsquo;s current scores, target schools, and available timeline. For students with dyslexia or processing differences, strategies are adapted so the test format stops being an obstacle and starts being manageable.</p>
+            <ul class="featured__list" role="list">
+              <li class="featured__list-item">Diagnostic assessment to identify exact score gaps</li>
+              <li class="featured__list-item">Section-by-section strategy for Reading, Writing, and Math</li>
+              <li class="featured__list-item">Adapted approaches for students with dyslexia or processing differences</li>
+              <li class="featured__list-item">Full-length timed practice tests with detailed review</li>
+            </ul>
+            <a href="#packages" class="btn btn-primary">Book a Test Prep Session</a>
+          </div>
+          <div class="featured__stats-box">
+            <p class="featured__stat-number">25%</p>
+            <p class="featured__stat-label">Median Student increases their score by 25%</p>
+            <div class="featured__stat-divider"></div>
+            <p class="featured__stat-note">This increase equates in a 5-6 point increase on the ACT and 200-250 point increase on the SAT</p>
+          </div>
+        </div>
+        <div class="services__cards">
+          <article class="svc-card">
+            <p class="svc-card__eyebrow">Dyslexia &middot; Dyscalculia &middot; Structured Literacy</p>
+            <h3 class="svc-card__title">Learning Differences Support</h3>
+            <p class="svc-card__body">Students with dyslexia, dyscalculia, or other learning differences don&rsquo;t need harder work — they need a fundamentally different approach. Tyse is trained in the Barton Reading and Spelling System and works from a structured literacy framework, adjusting pacing, presentation, and technique so that material actually builds and sticks rather than gets re-covered without result.</p>
+            <a href="#packages" class="btn btn-secondary">Book a Session</a>
+          </article>
+          <article class="svc-card">
+            <p class="svc-card__eyebrow">Middle School &middot; High School &middot; College</p>
+            <h3 class="svc-card__title">Math &amp; Science Tutoring</h3>
+            <p class="svc-card__body">From pre-algebra to college-level calculus, statistics, physics, and chemistry — Tyse focuses on real conceptual understanding rather than formula memorization. Students learn to see the reasoning behind the math, which means they can handle problems they&rsquo;ve never seen before rather than freezing when a question looks slightly different from practice.</p>
+            <a href="#packages" class="btn btn-secondary">Book a Session</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="our-approach" id="our-approach">
+      <div class="container">
+        <div class="our-approach__grid">
+          <div class="our-approach__text">
+            <p class="our-approach__eyebrow blur-focus bf-delay-1">Our Approach</p>
+            <h2 class="our-approach__headline blur-focus bf-delay-2">What Is the Barton Reading &amp; Spelling System?</h2>
+            <p class="our-approach__body blur-focus bf-delay-3">The Barton Reading and Spelling System is one of the most widely respected structured literacy programs available for students with dyslexia and related language-based learning differences. Developed specifically for students who struggle with traditional reading instruction, Barton uses a carefully sequenced, multisensory approach — sight, sound, and movement together — to build lasting phonological awareness, decoding skills, and spelling accuracy from the ground up.</p>
+            <p class="our-approach__body">Unlike programs that expose students to material and hope repetition leads to retention, Barton is mastery-based: students do not advance until they have genuinely internalized each skill. This is a fundamental design choice. It means sessions move at the pace the student actually needs, not the pace a curriculum schedule demands. Progress is real, not performed.</p>
+            <p class="our-approach__body">Tyse is directly trained in the Barton methodology — not self-taught, not workshop-certified, but trained with hands-on practice in the actual system. That training shapes every session: the sequencing of instruction, the way errors are addressed, the way concepts are revisited and reinforced. Students who have tried other tutors and felt stuck often describe a noticeable difference in how the material finally starts to connect.</p>
+            <div class="our-approach__pills blur-focus bf-delay-4">
+              <span class="approach-pill"><span class="approach-pill__dot"></span>Multisensory Instruction</span>
+              <span class="approach-pill"><span class="approach-pill__dot"></span>Sequential Mastery</span>
+              <span class="approach-pill"><span class="approach-pill__dot"></span>Dyslexia-Focused Design</span>
+            </div>
+            <a href="#packages" class="btn btn-primary blur-focus bf-delay-5">Book a Free Consultation</a>
+          </div>
+          <div class="our-approach__video-card blur-focus bf-delay-3">
+            <div class="video-card__media">
+              <div class="video-card__play" role="img" aria-label="Video play button"><div class="video-card__play-icon"></div></div>
+            </div>
+            <div class="video-card__content">
+              <p class="video-card__label">Watch: Meet Your Tutor</p>
+              <p class="video-card__desc">Hear directly from Tyse about his training in the Barton system, his teaching philosophy, and why he works exclusively with students who learn differently.</p>
+              <p class="video-card__placeholder">[Replace with Vimeo or YouTube embed]</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-it-works" id="how-it-works">
+      <div class="container">
+        <div class="how-it-works__header">
+          <p class="how-it-works__eyebrow">Getting Started Is Simple</p>
+          <h2 class="how-it-works__headline">Your Student Could Start Learning This Week</h2>
+        </div>
+        <div class="how-it-works__steps">
+          <div class="step-card">
+            <div class="step-card__badge" aria-hidden="true">1</div>
+            <h3 class="step-card__title">Choose a Package</h3>
+            <p class="step-card__body">Review the session packages below and pick the one that fits your student&rsquo;s needs and schedule. Not sure which is right? The free consultation is a good place to start — there&rsquo;s no pressure to commit.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-card__badge" aria-hidden="true">2</div>
+            <h3 class="step-card__title">Book Online Through TutorFish</h3>
+            <p class="step-card__body">All sessions are scheduled through TutorFish — a secure tutoring platform with simple online booking, session reminders, and easy rescheduling. You can view our availability and lock in your first appointment in a few minutes.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-card__badge" aria-hidden="true">3</div>
+            <h3 class="step-card__title">Begin With a Purposeful First Session</h3>
+            <p class="step-card__body">The first session isn&rsquo;t filler — it&rsquo;s intentional. Tyse uses it to assess where your student actually is, understand how they learn best, and set a clear direction for what comes next. Students leave knowing exactly what they&rsquo;re working toward.</p>
+          </div>
+        </div>
+        <div class="how-it-works__cta">
+          <a href="#packages" class="btn btn-primary">Get Started Today</a>
+          <p class="how-it-works__cta-note">Sessions booked through TutorFish &middot; Secure online scheduling</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials" id="reviews">
+      <div class="container">
+        <div class="testimonials__header">
+          <p class="testimonials__eyebrow">Real Students. Real Results.</p>
+          <h2 class="testimonials__headline">Students Who Believed They Couldn&rsquo;t &mdash; Until They Did</h2>
+        </div>
+        <div class="testimonials__stats-bar">
+          <div class="stat-item"><p class="stat-item__number">95%</p><p class="stat-item__label">average ACT score improvement</p></div>
+          <div class="stat-item"><p class="stat-item__number">200+ pts</p><p class="stat-item__label">average SAT score improvement</p></div>
+          <div class="stat-item"><p class="stat-item__number">5+ pts</p><p class="stat-item__label">of students improve 2+ grade levels within 3 months</p></div>
+          <div class="stat-item"><p class="stat-item__number">3</p><p class="stat-item__label">Barton System levels covered — from foundational to advanced</p></div>
+        </div>
+        <div class="testimonials__grid">
+          <article class="testi-card">
+            <div class="testi-card__stars" aria-label="5 stars"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
+            <div class="testi-card__quote-mark" aria-hidden="true">&ldquo;</div>
+            <p class="testi-card__text">My daughter was diagnosed with dyslexia in 4th grade and had seen three different tutors before we found Tyse. Within two months she was reading out loud voluntarily for the first time. I didn&rsquo;t think that was something we&rsquo;d ever see.</p>
+            <div class="testi-card__attribution">
+              <div class="testi-card__avatar" aria-hidden="true">SM</div>
+              <div><p class="testi-card__name">Sarah M.</p><p class="testi-card__role">Parent of 7th grader, Boulder CO</p></div>
+            </div>
+          </article>
+          <article class="testi-card">
+            <div class="testi-card__stars" aria-label="5 stars"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
+            <div class="testi-card__quote-mark" aria-hidden="true">&ldquo;</div>
+            <p class="testi-card__text">Our son went from a 1240 to a 1430 on the SAT over about four months of working with Tyse. What changed wasn&rsquo;t just the score — it was his confidence going into the test. He stopped dreading it and started actually believing he could do well.</p>
+            <div class="testi-card__attribution">
+              <div class="testi-card__avatar" aria-hidden="true">DK</div>
+              <div><p class="testi-card__name">David K.</p><p class="testi-card__role">Parent of 11th grader, Louisville CO</p></div>
+            </div>
+          </article>
+          <article class="testi-card">
+            <div class="testi-card__stars" aria-label="5 stars"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
+            <div class="testi-card__quote-mark" aria-hidden="true">&ldquo;</div>
+            <p class="testi-card__text">I was failing pre-calc and completely lost heading into finals. After five sessions I actually understood what was happening in class instead of just trying to memorize formulas. Ended up with a B+ on my final. I honestly couldn&rsquo;t believe it.</p>
+            <div class="testi-card__attribution">
+              <div class="testi-card__avatar" aria-hidden="true">JR</div>
+              <div><p class="testi-card__name">Jordan R.</p><p class="testi-card__role">High school junior, Longmont CO</p></div>
+            </div>
+          </article>
+        </div>
+        <div class="testimonials__notice" role="no
